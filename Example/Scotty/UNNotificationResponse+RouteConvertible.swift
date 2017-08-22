@@ -7,7 +7,7 @@
 
 import Foundation
 import UserNotifications
-import RouteKit
+import Scotty
 
 @available(iOS 10.0, *)
 extension UNNotificationResponse: RouteConvertible {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RouteKit
+import Scotty
 import CoreSpotlight
 
 extension NSUserActivity: RouteConvertible {

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RouteKit
+import Scotty
 
 //MARK: Specialized Routes
 extension RouteIdentifier {

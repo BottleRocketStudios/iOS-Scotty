@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RouteKit
+import Scotty
 
 class OtherViewController: UIViewController {
     

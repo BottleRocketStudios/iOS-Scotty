@@ -7,7 +7,7 @@
 
 import UIKit
 import UserNotifications
-import RouteKit
+import Scotty
 import CoreSpotlight
 import MobileCoreServices
 

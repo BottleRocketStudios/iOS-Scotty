@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RouteKit
+import Scotty
 
 extension URL: RouteConvertible {
     public typealias RoutableType = AnyRoute<UITabBarController>

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RouteKit
+import Scotty
 
 extension RouteController where RootViewController == UITabBarController {
 	
