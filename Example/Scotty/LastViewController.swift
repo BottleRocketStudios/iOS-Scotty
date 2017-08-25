@@ -11,6 +11,6 @@ import Scotty
 class LastViewController: UIViewController {
     
     @IBAction func goToLeft() {
-		RouteController<UITabBarController>.default.open(AnyRoute.leftTab)
+		Router.default.open(AnyRoute.leftTab)
     }
 }

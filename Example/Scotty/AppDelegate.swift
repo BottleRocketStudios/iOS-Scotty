@@ -31,20 +31,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 	
 	//MARK: State Restoration
 	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-		return RouteController<UITabBarController>.default.open(url)
+		return Router.default.open(url)
 	}
 	
 	func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-		return RouteController<UITabBarController>.default.open(userActivity)
+		return Router.default.open(userActivity)
 	}
 	
 	func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-		completionHandler(RouteController<UITabBarController>.default.open(shortcutItem))
+		completionHandler(Router.default.open(shortcutItem))
 	}
 	
 	@available(iOS 10.0, *)
 	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-		RouteController<UITabBarController>.default.open(response)
+		Router.default.open(response)
 		completionHandler()
 	}
 	
@@ -57,15 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //MARK: App Configuration
 extension AppDelegate {
 	
-	//TODO: Can/should these be moved into RouteKit?
 	func handleLaunchOptionsRoute(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		if let url = launchOptions?[.url] as? URL {
-			return RouteController<UITabBarController>.default.open(url)
+			return Router.default.open(url)
 		} else if let shortcutItem = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem {
-			return RouteController<UITabBarController>.default.open(shortcutItem)
+			return Router.default.open(shortcutItem)
 		} else if let activityType = launchOptions?[.userActivityType] as? String {
 			let userActivity = NSUserActivity(activityType: activityType)
-			return RouteController<UITabBarController>.default.open(userActivity)
+			return Router.default.open(userActivity)
 		}
 		
 		return false

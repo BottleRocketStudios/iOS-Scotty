@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Scotty'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Scotty.'
+  s.summary          = 'A framework designed to make app routing simpler and safer.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,13 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Will McGinty/Scotty'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Will McGinty' => 'Will McGinty' }
-  s.source           = { :git => 'https://github.com/Will McGinty/Scotty.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.homepage         = 'https://github.com/bottlerocketstudios/Scotty'
+  s.license          = { :type => 'Apache', :file => 'LICENSE' }
+  s.author           = { 'Bottle Rocket Studios' => '' }
+  s.source           = { :git => 'https://github.com/bottlerocketstudios/Scotty.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '9.0'
   s.source_files = 'Scotty/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Scotty' => ['Scotty/Assets/*.png']
-  # }
+  s.frameworks = 'Foundation', 'UIKit'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

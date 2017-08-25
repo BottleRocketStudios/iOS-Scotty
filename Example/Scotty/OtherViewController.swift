@@ -11,6 +11,6 @@ import Scotty
 class OtherViewController: UIViewController {
     
     @IBAction func goToRight() {
-        RouteController<UITabBarController>.default.open(AnyRoute.rightTab)
+        Router.default.open(AnyRoute.rightTab)
     }
 }
