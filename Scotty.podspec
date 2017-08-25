@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A framework designed to make app routing simpler and safer.
                        DESC
 
   s.homepage         = 'https://github.com/bottlerocketstudios/Scotty'
   s.license          = { :type => 'Apache', :file => 'LICENSE' }
-  s.author           = { 'Bottle Rocket Studios' => '' }
+  s.author           = { 'Bottle Rocket Studios' => 'will.mcginty@bottlerocketstudios.com' }
   s.source           = { :git => 'https://github.com/bottlerocketstudios/Scotty.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'

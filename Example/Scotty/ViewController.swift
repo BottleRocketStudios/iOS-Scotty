@@ -13,11 +13,15 @@ class ViewController: UIViewController, RouteActionable {
     
     var routeAction: RouteAction?
 
+	//MARK: Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+		
+		//Setting isPreparedForAction to true will cause the routeAction (if present) to execute
         routeAction?.isPreparedForAction = true
     }
-    
+	
+	//MARK: Actions
     @IBAction func goToMiddle() {
         Router.default.open(AnyRoute.middleTab)
     }
