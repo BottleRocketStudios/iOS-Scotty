@@ -1,4 +1,4 @@
-BR RouteKit - iOS
+Scotty
 ============
 
 ### Purpose
