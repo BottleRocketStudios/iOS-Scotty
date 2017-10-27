@@ -2,7 +2,7 @@ Scotty
 ============
 
 ### Purpose
-This library provides a simple abstraction around the various entry points to an iOS application. URLs, application shortcut items, user activities, notification responses, and even custom types can be converted into a Route. These routes are basically the various destinations your app can deep link too, allowing you to have a single code path through which all application links are executed.
+This library provides a simple abstraction around the various entry points to an iOS application. URLs, application shortcut items, user activities, notification responses, and even custom types can be converted into a Route. These routes represent the various destinations your app can deep link too, allowing you to have a single code path through which all application links are executed.
 
 ### Key Concepts
 * Route - An abstract representation of the code required to move your application from its root state to a specific final destination.
@@ -100,3 +100,28 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ### Requirements
 
 Requires iOS 9.0 +, Swift 3.2
+
+### Installation - CocoaPods
+
+[CocoaPods]: http://cocoapods.org
+
+Add the following to your [Podfile](http://guides.cocoapods.org/using/the-podfile.html):
+
+```ruby
+pod 'Scotty'
+```
+
+You will also need to make sure you're opting into using frameworks:
+
+```ruby
+use_frameworks!
+```
+
+Then run `pod install` with CocoaPods 0.36 or newer.
+
+### Contributing
+
+See the [CONTRIBUTING] document. Thank you, [contributors]!
+
+[CONTRIBUTING]: CONTRIBUTING.md
+[contributors]: https://github.com/thoughtbot/Argo/graphs/contributors

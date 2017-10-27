@@ -11,20 +11,14 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'A framework designed to make app routing simpler and safer.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-A framework designed to make app routing simpler and safer.
+Scotty provides a simple abstraction around the various entry points to an iOS application. URLs, UIApplicationShortcutItems, NSUserActivities, UNNotificationResponses, and even custom types can be converted into a Route. These routes represent the various destinations your app can deep link too, allowing you to have a single code path through which all application links are executed.
                        DESC
 
-  s.homepage         = 'https://github.com/bottlerocketstudios/Scotty'
+  s.homepage         = 'https://github.com/BottleRocketStudios/iOS-Scotty'
   s.license          = { :type => 'Apache', :file => 'LICENSE' }
   s.author           = { 'Bottle Rocket Studios' => 'will.mcginty@bottlerocketstudios.com' }
-  s.source           = { :git => 'https://github.com/bottlerocketstudios/Scotty.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/bottlerocketstudios/iOS-Scotty.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
   s.source_files = 'Scotty/Classes/**/*'
