@@ -124,4 +124,4 @@ Then run `pod install` with CocoaPods 0.36 or newer.
 See the [CONTRIBUTING] document. Thank you, [contributors]!
 
 [CONTRIBUTING]: CONTRIBUTING.md
-[contributors]: https://github.com/thoughtbot/Argo/graphs/contributors
+[contributors]: https://github.com/BottleRocketStudios/iOS-Scotty/graphs/contributors
