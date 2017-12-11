@@ -10,15 +10,17 @@ import UserNotifications
 import Scotty
 
 class ViewController: UIViewController, RouteActionable {
-    
+
+    //MARK: Properties
+    var isPreparedForAction: Bool = false
     var routeAction: RouteAction?
 
 	//MARK: Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 		
-		//Setting isPreparedForAction to true will cause the routeAction (if present) to execute
-        routeAction?.isPreparedForAction = true
+        //Calling this method with a value of 'true' will cause the routeAction (if present) to execute
+        setPreparedForAction(true)
     }
 	
 	//MARK: Actions

@@ -75,11 +75,11 @@ class Tests: XCTestCase {
 		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { (vc: UIViewController, options) in
 			
 			let actionable = ActionableObject()
-			let routeAction = RouteAction {
-				exp.fulfill()
-			}
-			actionable.routeAction = routeAction
-			actionable.setReadyForRouteAction()
+            actionable.setRouteAction {
+                exp.fulfill()
+            }
+            
+            actionable.setPreparedForAction(true)
 			
 			return true
 		}
@@ -91,13 +91,15 @@ class Tests: XCTestCase {
 	
 	func testRouteActionExecutesOnce() {
 		let exp = expectation(description: "routeExecution")
-		var routeAction = RouteAction {
-			exp.fulfill()
-		}
-		
-		routeAction.isPreparedForAction = true
-		routeAction.isPreparedForAction = true
-		
+        
+        let actionable = ActionableObject()
+        actionable.setRouteAction {
+            exp.fulfill()
+        }
+        
+        actionable.setPreparedForAction(true)
+        actionable.setPreparedForAction(true)
+        
 		waitForExpectations(timeout: 0.5, handler: nil)
 	}
 	
@@ -146,11 +148,7 @@ class Tests: XCTestCase {
 	}
 	
 	fileprivate class ActionableObject: RouteActionable {
-		
+        var isPreparedForAction: Bool = false
 		var routeAction: RouteAction?
-		
-		func setReadyForRouteAction() {
-			routeAction?.isPreparedForAction = true
-		}
 	}
 }
