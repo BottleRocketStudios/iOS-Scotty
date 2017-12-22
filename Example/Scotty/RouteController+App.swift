@@ -2,8 +2,7 @@
 //  RouteController+App.swift
 //  RouteKit
 //
-//  Created by Will McGinty on 7/6/17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Copyright © 2017 Bottle Rocket Studios. All rights reserved.
 //
 
 import Foundation

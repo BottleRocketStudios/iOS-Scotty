@@ -16,7 +16,7 @@ Scotty provides a simple abstraction around the various entry points to an iOS a
                        DESC
 
   s.homepage         = 'https://github.com/BottleRocketStudios/iOS-Scotty'
-  s.license          = { :type => 'Apache', :file => 'LICENSE' }
+  s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.author           = { 'Bottle Rocket Studios' => 'will.mcginty@bottlerocketstudios.com' }
   s.source           = { :git => 'https://github.com/bottlerocketstudios/iOS-Scotty.git', :tag => s.version.to_s }
 
