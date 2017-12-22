@@ -1,5 +1,6 @@
 Scotty
 ============
+[![CI Status](http://img.shields.io/travis/BottleRocketStudios/iOS-Scotty.svg?style=flat)](https://travis-ci.org/BottleRocketStudios/iOS-Scotty)
 [![Version](https://img.shields.io/cocoapods/v/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![License](https://img.shields.io/cocoapods/l/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![Platform](https://img.shields.io/cocoapods/p/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
