@@ -6,10 +6,10 @@ osx_image: xcode9.2
 language: swift
 env:
   global:
-    - WORKSPACE=Example/Hyperspace.xcworkspace
+    - WORKSPACE=Example/Scotty.xcworkspace
     - IOS_FRAMEWORK_SCHEME="Scotty-Example"
   matrix:
-    - DESTINATION="platform=iOS Simulator,OS=11.2,name=iPhone X"                 SDK="appletvsimulator"  SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" POD_LINT="YES"
+    - DESTINATION="platform=iOS Simulator,OS=11.2,name=iPhone X" SDK="iphonesimulator" SCHEME="$IOS_FRAMEWORK_SCHEME" RUN_TESTS="YES" POD_LINT="YES"
 
 # cache: cocoapods
 # podfile: Example/Podfile
