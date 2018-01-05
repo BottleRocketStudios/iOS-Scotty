@@ -36,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E0B5FCF1F50A43D008EB996 /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = text; name = NOTICE; path = ../NOTICE; sourceTree = "<group>"; };
-		0E0B5FD01F50A454008EB996 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		0EF354E11F4C9EFE0072B868 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EF354E31F4C9F0F0072B868 /* LastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 		0EF354E41F4C9F0F0072B868 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -201,9 +199,7 @@
 			children = (
 				CE524E24527D90DF5C0202AC /* Scotty.podspec */,
 				D0FDC77671587291B479E92A /* README.md */,
-				0E0B5FD01F50A454008EB996 /* CONTRIBUTING.md */,
 				7F4F3DA5B45D889F747B4D9E /* LICENSE */,
-				0E0B5FCF1F50A43D008EB996 /* NOTICE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
