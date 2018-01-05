@@ -131,7 +131,34 @@ class Tests: XCTestCase {
 		XCTAssert(a == c)
 		XCTAssertFalse(a == b)
 	}
-	
+    
+    func testRouteIdentifierPatternMatching() {
+        let e = expectation(description: "pattern match")
+        let a = RouteIdentifier(rawValue: "a")
+        let b = RouteIdentifier(rawValue: "b")
+        
+        switch a {
+        case b: XCTFail()
+        case a: e.fulfill()
+        default: XCTFail()
+        }
+        
+        waitForExpectations(timeout: 0.1, handler: nil)
+    }
+    
+    func testRoutablePatternMatching() {
+        let e = expectation(description: "pattern match")
+        let id = RouteIdentifier(rawValue: "test")
+        let r = AnyRoute(id: id) { vc, options in return true }
+        
+        switch r {
+        case id: e.fulfill()
+        default: XCTFail()
+        }
+        
+        waitForExpectations(timeout: 0.1, handler: nil)
+    }
+    
 	//MARK: Testing Structs
 	fileprivate struct SomeRouteConvertible: RouteConvertible {
 		var route: AnyRoute<UIViewController>? {

@@ -22,3 +22,10 @@ extension RouteIdentifier: Equatable {
 		return lhs.rawValue == rhs.rawValue
 	}
 }
+
+//MARK: Pattern Match
+extension RouteIdentifier {
+    static func ~= (lhs: RouteIdentifier, rhs: RouteIdentifier) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
+}

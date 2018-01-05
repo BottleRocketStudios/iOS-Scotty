@@ -26,6 +26,13 @@ public protocol Routable {
     func route(fromRootViewController rootViewController: RootViewController, options: Options?) -> Bool
 }
 
+//MARK: Pattern Match
+public extension Routable {
+    static func ~=(lhs: RouteIdentifier, rhs: Self) -> Bool {
+        return lhs == rhs.identifier
+    }
+}
+
 /// A type erased struct that can be used to represent any Routable object tied to a given type of root view controller.
 public struct AnyRoute<RootViewController: UIViewController>: Routable {
 	public typealias Router = (_ rootViewController: RootViewController, _ options: Routable.Options?) -> Bool
