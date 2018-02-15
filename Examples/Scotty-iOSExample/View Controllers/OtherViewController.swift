@@ -10,7 +10,7 @@ import Scotty
 
 class OtherViewController: UIViewController {
 	
-	//MARK: Actions
+	// MARK: Actions
     @IBAction func goToRight() {
         Router.default.open(AnyRoute.rightTab)
     }

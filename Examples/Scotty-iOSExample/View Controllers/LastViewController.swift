@@ -10,7 +10,7 @@ import Scotty
 
 class LastViewController: UIViewController {
 	
-	//MARK: Actions
+	// MARK: Actions
     @IBAction func goToLeft() {
 		Router.default.open(AnyRoute.leftTab)
     }

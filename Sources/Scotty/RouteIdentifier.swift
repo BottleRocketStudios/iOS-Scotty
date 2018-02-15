@@ -16,14 +16,14 @@ public struct RouteIdentifier: RawRepresentable {
 	}
 }
 
-//MARK: Equatable
+// MARK: Equatable
 extension RouteIdentifier: Equatable {
-	public static func ==(lhs: RouteIdentifier, rhs: RouteIdentifier) -> Bool {
+	public static func == (lhs: RouteIdentifier, rhs: RouteIdentifier) -> Bool {
 		return lhs.rawValue == rhs.rawValue
 	}
 }
 
-//MARK: Pattern Match
+// MARK: Pattern Match
 extension RouteIdentifier {
     static func ~= (lhs: RouteIdentifier, rhs: RouteIdentifier) -> Bool {
         return lhs.rawValue == rhs.rawValue

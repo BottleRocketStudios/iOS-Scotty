@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
 	
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
 		configureUserNotificationCenter()
 		configureIndexableItems()
@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 		return true
 	}
 	
-	//MARK: State Restoration
-	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+	// MARK: State Restoration
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
 		return Router.default.open(url)
 	}
 	
@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 	}
 }
 
-//MARK: App Configuration
+// MARK: App Configuration
 extension AppDelegate {
 	
 	func handleLaunchOptionsRoute(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -71,11 +71,11 @@ extension AppDelegate {
 	}
 	
 	func launchOptionsContainsRoute(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		if let _ = launchOptions?[.url] as? URL {
+        if launchOptions?[.url] as? URL != nil {
 			return true
-		} else if let _ = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem {
+		} else if launchOptions?[.shortcutItem] as? UIApplicationShortcutItem != nil {
 			return true
-		} else if let _ = launchOptions?[.userActivityType] as? String {
+		} else if launchOptions?[.userActivityType] as? String != nil {
 			return true
 		} else {
 			return false
@@ -89,7 +89,7 @@ extension AppDelegate {
 	}
 }
 
-//MARK: Spotlight Indexing
+// MARK: Spotlight Indexing
 extension AppDelegate {
     
     func configureIndexableItems() {
@@ -119,6 +119,3 @@ extension AppDelegate {
         }
     }
 }
-
-
-

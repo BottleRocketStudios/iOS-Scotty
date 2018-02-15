@@ -7,15 +7,16 @@
 
 import Foundation
 
-/// The RouteController object handles the execution of routes as entry points into your application. The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.
+/// The RouteController object handles the execution of routes as entry points into your application.
+/// The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.
 open class RouteController<RootViewController: UIViewController>: NSObject {
     
-    //MARK: Properties
+    // MARK: Properties
 	fileprivate let rootViewController: RootViewController
     fileprivate(set) var isPreparedForRouting = false
 	fileprivate(set) var storedRoute: (() -> Void)?
     
-    //MARK: Initializers
+    // MARK: Initializers
     public init(rootViewController: RootViewController, ready: Bool = true) {
         self.rootViewController = rootViewController
         super.init()
@@ -24,7 +25,7 @@ open class RouteController<RootViewController: UIViewController>: NSObject {
     }
 }
 
-//MARK: Route Processing
+// MARK: Route Processing
 public extension RouteController {
 
     /// Attempts to open (and execute) any object that conforms to the RouteConvertible protocol, passing in the providing routing options during execution. If routing reaches its intended destination, returns true. Otherwise returns false.
@@ -65,7 +66,7 @@ public extension RouteController {
     }
 }
 
-//MARK: Routing Availability
+// MARK: Routing Availability
 public extension RouteController {
 	
 	/// The StoredRoutePolicy determines the outcome of any routes the RouteController has stored when it resumes handling routes.
@@ -104,13 +105,14 @@ public extension RouteController {
 	
     /// Modify the route controller's ability to handle routes.
     ///
-    /// - Parameter enabled: Passing in true will allow the controller to resume handling routes. False will suspend route handling. Note that even while route handling is suspended, any routes where isSuspendable = false will still be executed.
+    /// - Parameter enabled: Passing in true will allow the controller to resume handling routes.
+    /// False will suspend route handling. Note that even while route handling is suspended, any routes where isSuspendable = false will still be executed.
     func setRouteHandling(enabled: Bool) {
         enabled ? resumeHandlingRoutes() : suspendHandlingRoutes()
 	}
 }
 
-//MARK: Stored (Delayed) Links
+// MARK: Stored (Delayed) Links
 fileprivate extension RouteController {
 	
 	func executeStoredRoute() {
@@ -123,7 +125,7 @@ fileprivate extension RouteController {
 	}
 }
 
-//MARK: Route Storage
+// MARK: Route Storage
 fileprivate extension RouteController {
     
     func stored<T: Routable> (routable: T, options: Routable.Options?) -> () -> Void where T.RootViewController == RootViewController {
