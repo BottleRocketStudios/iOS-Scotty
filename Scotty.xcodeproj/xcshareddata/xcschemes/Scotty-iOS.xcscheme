@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Scotty_Example.app"
-               BlueprintName = "Scotty_Example"
+               BlueprintIdentifier = "0EFFC4C72035E7D500BC168B"
+               BuildableName = "Scotty.framework"
+               BlueprintName = "Scotty-iOS"
                ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Scotty_Tests.xctest"
-               BlueprintName = "Scotty_Tests"
+               BlueprintIdentifier = "0EFFC4CF2035E7D500BC168B"
+               BuildableName = "Scotty-iOSTests.xctest"
+               BlueprintName = "Scotty-iOSTests"
                ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,9 +48,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Scotty_Tests.xctest"
-               BlueprintName = "Scotty_Tests"
+               BlueprintIdentifier = "0EFFC4CF2035E7D500BC168B"
+               BuildableName = "Scotty-iOSTests.xctest"
+               BlueprintName = "Scotty-iOSTests"
                ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -58,9 +58,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Scotty_Example.app"
-            BlueprintName = "Scotty_Example"
+            BlueprintIdentifier = "0EFFC4C72035E7D500BC168B"
+            BuildableName = "Scotty.framework"
+            BlueprintName = "Scotty-iOS"
             ReferencedContainer = "container:Scotty.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,16 +78,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Scotty_Example.app"
-            BlueprintName = "Scotty_Example"
+            BlueprintIdentifier = "0EFFC4C72035E7D500BC168B"
+            BuildableName = "Scotty.framework"
+            BlueprintName = "Scotty-iOS"
             ReferencedContainer = "container:Scotty.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -97,16 +96,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Scotty_Example.app"
-            BlueprintName = "Scotty_Example"
+            BlueprintIdentifier = "0EFFC4C72035E7D500BC168B"
+            BuildableName = "Scotty.framework"
+            BlueprintName = "Scotty-iOS"
             ReferencedContainer = "container:Scotty.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
