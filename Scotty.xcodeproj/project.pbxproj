@@ -181,6 +181,18 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		0E84C2A42035F42A00E10E39 /* Scotty */ = {
+			isa = PBXGroup;
+			children = (
+				0EFFC4BB2035E64C00BC168B /* Routable.swift */,
+				0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */,
+				0EFFC4BD2035E64C00BC168B /* RouteController.swift */,
+				0EFFC4BA2035E64C00BC168B /* RouteConvertible.swift */,
+				0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */,
+			);
+			path = Scotty;
+			sourceTree = "<group>";
+		};
 		0EFFC4972035E60E00BC168B = {
 			isa = PBXGroup;
 			children = (
@@ -205,12 +217,8 @@
 		0EFFC4B72035E62700BC168B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0E84C2A42035F42A00E10E39 /* Scotty */,
 				0EFFC4BF2035E65300BC168B /* Supporting Files */,
-				0EFFC4BB2035E64C00BC168B /* Routable.swift */,
-				0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */,
-				0EFFC4BD2035E64C00BC168B /* RouteController.swift */,
-				0EFFC4BA2035E64C00BC168B /* RouteConvertible.swift */,
-				0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
