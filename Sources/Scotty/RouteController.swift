@@ -51,19 +51,6 @@ public extension RouteController {
         guard isPreparedForRouting || !routable.isSuspendable else { storedRoute = stored(routable: routable, options: options); return false }
         return routable.route(fromRootViewController: rootViewController, options: options)
     }
-	
-    /// Attempts to open (and execute) an AnyRoute object, passing in the providing routing options during execution. If routing reaches its intended destination, returns true. Otherwise returns false.
-    ///
-    /// - Parameters:
-    ///   - route: The object to be executed. If this object is nil, false will be returned.
-    ///   - options: Any routing options that should be taken into account when routing.
-    /// - Returns: Returns true if routing reaches its intended destination, otherwise returns false.
-    @discardableResult
-    func open(_ route: AnyRoute<RootViewController>?, options: Routable.Options? = nil) -> Bool {
-        guard let route = route else { return false }
-        guard isPreparedForRouting || !route.isSuspendable else { storedRoute = stored(routable: route, options: options); return false }
-        return route.route(fromRootViewController: rootViewController, options: options)
-    }
 }
 
 // MARK: Routing Availability

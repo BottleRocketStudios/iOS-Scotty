@@ -102,6 +102,18 @@ class Tests: XCTestCase {
         
 		waitForExpectations(timeout: 0.5, handler: nil)
 	}
+    
+    func testRouteActionExecutesImmediatelyIfReady() {
+        let ob = ActionableObject()
+        ob.isPreparedForAction = true
+        
+        let exp = expectation(description: "executesImmediately")
+        ob.setRouteAction {
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 0.1, handler: nil)
+    }
 	
 	func testNestedAnyRouteInitializers() {
 		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in return true }
