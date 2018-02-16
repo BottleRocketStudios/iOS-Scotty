@@ -11,11 +11,11 @@ import Scotty
 
 class ViewController: UIViewController, RouteActionable {
 
-    //MARK: Properties
+    // MARK: Properties
     var isPreparedForAction: Bool = false
     var routeAction: RouteAction?
 
-	//MARK: Lifecycle
+	// MARK: Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 		
@@ -23,7 +23,7 @@ class ViewController: UIViewController, RouteActionable {
         setPreparedForAction(true)
     }
 	
-	//MARK: Actions
+	// MARK: Actions
     @IBAction func goToMiddle() {
         Router.default.open(AnyRoute.middleTab)
     }
@@ -31,7 +31,7 @@ class ViewController: UIViewController, RouteActionable {
     @IBAction func triggerNotification() {
 		if #available(iOS 10.0, *) {
 			
-			UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+			UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { _, _ in
 				
 				//Create three actions for a generic notification category
 				let leftAction = UNNotificationAction(identifier: "leftTab", title: "Left", options: [.foreground])
@@ -55,4 +55,3 @@ class ViewController: UIViewController, RouteActionable {
 		}
     }
 }
-

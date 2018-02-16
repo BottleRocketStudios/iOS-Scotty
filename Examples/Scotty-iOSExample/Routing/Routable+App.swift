@@ -8,18 +8,18 @@
 import UIKit
 import Scotty
 
-//MARK: Specialized Routes
+// MARK: Specialized Routes
 extension RouteIdentifier {
 	static let leftTabRoute = RouteIdentifier(rawValue: "leftTab")
 	static let middleTabRoute = RouteIdentifier(rawValue: "middleTab")
 	static let rightTabRoute = RouteIdentifier(rawValue: "rightTab")
 }
 
-//MARK: Define Specialized Routes
+// MARK: Define Specialized Routes
 extension AnyRoute where RootViewController == UITabBarController {
 	    
     static var leftTab: AnyRoute {
-		return AnyRoute(id: .leftTabRoute) { rootViewController, options -> Bool in
+		return AnyRoute(id: .leftTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 0
             
             if let routeActionableController = rootViewController.selectedViewController as? RouteActionable {
@@ -35,21 +35,21 @@ extension AnyRoute where RootViewController == UITabBarController {
     }
     
     static var middleTab: AnyRoute {
-        return AnyRoute(id: .middleTabRoute) { rootViewController, options -> Bool in
+        return AnyRoute(id: .middleTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 1
             return true
         }
     }
     
     static var rightTab: AnyRoute {
-        return AnyRoute(id: .rightTabRoute) { rootViewController, options -> Bool in
+        return AnyRoute(id: .rightTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 2
             return true
         }
     }
 }
 
-//MARK: Helper
+// MARK: Helper
 extension AnyRoute where RootViewController == UITabBarController {
 	
 	static func route(forIdentifier identifier: String) -> AnyRoute? {

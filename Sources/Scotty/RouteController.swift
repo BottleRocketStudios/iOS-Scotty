@@ -7,15 +7,16 @@
 
 import Foundation
 
-/// The RouteController object handles the execution of routes as entry points into your application. The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.
+/// The RouteController object handles the execution of routes as entry points into your application.
+/// The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.
 open class RouteController<RootViewController: UIViewController>: NSObject {
     
-    //MARK: Properties
+    // MARK: Properties
 	fileprivate let rootViewController: RootViewController
     fileprivate(set) var isPreparedForRouting = false
 	fileprivate(set) var storedRoute: (() -> Void)?
     
-    //MARK: Initializers
+    // MARK: Initializers
     public init(rootViewController: RootViewController, ready: Bool = true) {
         self.rootViewController = rootViewController
         super.init()
@@ -24,7 +25,7 @@ open class RouteController<RootViewController: UIViewController>: NSObject {
     }
 }
 
-//MARK: Route Processing
+// MARK: Route Processing
 public extension RouteController {
 
     /// Attempts to open (and execute) any object that conforms to the RouteConvertible protocol, passing in the providing routing options during execution. If routing reaches its intended destination, returns true. Otherwise returns false.
@@ -50,22 +51,9 @@ public extension RouteController {
         guard isPreparedForRouting || !routable.isSuspendable else { storedRoute = stored(routable: routable, options: options); return false }
         return routable.route(fromRootViewController: rootViewController, options: options)
     }
-	
-    /// Attempts to open (and execute) an AnyRoute object, passing in the providing routing options during execution. If routing reaches its intended destination, returns true. Otherwise returns false.
-    ///
-    /// - Parameters:
-    ///   - route: The object to be executed. If this object is nil, false will be returned.
-    ///   - options: Any routing options that should be taken into account when routing.
-    /// - Returns: Returns true if routing reaches its intended destination, otherwise returns false.
-    @discardableResult
-    func open(_ route: AnyRoute<RootViewController>?, options: Routable.Options? = nil) -> Bool {
-        guard let route = route else { return false }
-        guard isPreparedForRouting || !route.isSuspendable else { storedRoute = stored(routable: route, options: options); return false }
-        return route.route(fromRootViewController: rootViewController, options: options)
-    }
 }
 
-//MARK: Routing Availability
+// MARK: Routing Availability
 public extension RouteController {
 	
 	/// The StoredRoutePolicy determines the outcome of any routes the RouteController has stored when it resumes handling routes.
@@ -104,13 +92,14 @@ public extension RouteController {
 	
     /// Modify the route controller's ability to handle routes.
     ///
-    /// - Parameter enabled: Passing in true will allow the controller to resume handling routes. False will suspend route handling. Note that even while route handling is suspended, any routes where isSuspendable = false will still be executed.
+    /// - Parameter enabled: Passing in true will allow the controller to resume handling routes.
+    /// False will suspend route handling. Note that even while route handling is suspended, any routes where isSuspendable = false will still be executed.
     func setRouteHandling(enabled: Bool) {
         enabled ? resumeHandlingRoutes() : suspendHandlingRoutes()
 	}
 }
 
-//MARK: Stored (Delayed) Links
+// MARK: Stored (Delayed) Links
 fileprivate extension RouteController {
 	
 	func executeStoredRoute() {
@@ -123,7 +112,7 @@ fileprivate extension RouteController {
 	}
 }
 
-//MARK: Route Storage
+// MARK: Route Storage
 fileprivate extension RouteController {
     
     func stored<T: Routable> (routable: T, options: Routable.Options?) -> () -> Void where T.RootViewController == RootViewController {

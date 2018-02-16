@@ -17,7 +17,8 @@ public protocol Routable {
 	/// A unique identifier for this Routable object. Should be unique among all routes an application supports.
 	var identifier: RouteIdentifier { get }
 	
-    /// Determines the specifics of the route. This function should make any necessary requirements to the navigation hierarchy to reach the intended destination. If the intended destination can be reached successfully, this function should return true. Otherwise, return false.
+    /// Determines the specifics of the route. This function should make any necessary requirements to the navigation hierarchy to reach the intended destination.
+    /// If the intended destination can be reached successfully, this function should return true. Otherwise, return false.
     ///
     /// - Parameters:
     ///   - rootViewController: The view controller at the root of the navigation hierarchy.
@@ -26,9 +27,9 @@ public protocol Routable {
     func route(fromRootViewController rootViewController: RootViewController, options: Options?) -> Bool
 }
 
-//MARK: Pattern Match
+// MARK: Pattern Match
 public extension Routable {
-    static func ~=(lhs: RouteIdentifier, rhs: Self) -> Bool {
+    static func ~= (lhs: RouteIdentifier, rhs: Self) -> Bool {
         return lhs == rhs.identifier
     }
 }
@@ -46,7 +47,7 @@ public struct AnyRoute<RootViewController: UIViewController>: Routable {
 	/// Determines if this Routable object can be suspended by its executing RouteController. If this property is set to false, this route will always execute immediately.
 	public var isSuspendable: Bool
 	
-	//MARK: Initializers
+	// MARK: Initializers
 	public init(id: RouteIdentifier, suspendable: Bool = true, routeBlock: @escaping Router) {
 		identifier = id
 		isSuspendable = suspendable
@@ -61,7 +62,8 @@ public struct AnyRoute<RootViewController: UIViewController>: Routable {
 		self.init(id: routable.identifier, suspendable: suspendable, routeBlock: routable.route)
 	}
 	
-	/// Determines the specifics of the route. This function should make any necessary requirements to the navigation hierarchy to reach the intended destination. If the intended destination can be reached successfully, this function should return true. Otherwise, return false.
+	/// Determines the specifics of the route. This function should make any necessary requirements to the navigation hierarchy to reach the intended destination.
+    /// If the intended destination can be reached successfully, this function should return true. Otherwise, return false.
 	///
 	/// - Parameters:
 	///   - rootViewController: The view controller at the root of the navigation hierarchy.
