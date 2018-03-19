@@ -22,12 +22,24 @@ public struct Route<RootViewController: UIViewController> {
     let identifier: RouteIdentifier
     
     // MARK: Initializers
+    
+    /// Initialize a new Route object with a given identifier, suspendable property and navigator.
+    ///
+    /// - Parameters:
+    ///   - identifier: The RouteIdentifier corresponding to this route.
+    ///   - isSuspendable: The suspend ability of this route. If this is false, the route will be executed immediately. If true, the controller can hold it for a period of time before executing. Defaults to true.
+    ///   - navigator: The handler that executes in order to manipulate the view controller hierarchy to reach the destination.
     public init(identifier: RouteIdentifier, isSuspendable: Bool = true, navigator: @escaping Navigator) {
         self.identifier = identifier
         self.isSuspendable = isSuspendable
         self.navigator = navigator
     }
     
+    /// Initialize a new Route object from a different Route.
+    ///
+    /// - Parameters:
+    ///   - route: The route to base the new Route off of.
+    ///   - isSuspendable: The suspend ability of this new route. Defaults to true.
     public init(route: Route<RootViewController>, isSuspendable: Bool = true) {
         self.init(identifier: route.identifier, isSuspendable: isSuspendable, navigator: route.navigator)
     }
