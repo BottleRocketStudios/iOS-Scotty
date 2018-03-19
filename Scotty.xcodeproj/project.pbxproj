@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E2FDBF42035E8FF00E1DE39 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BB2035E64C00BC168B /* Routable.swift */; };
 		0E2FDBF52035E90100E1DE39 /* RouteActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */; };
 		0E2FDBF62035E90300E1DE39 /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BD2035E64C00BC168B /* RouteController.swift */; };
-		0E2FDBF72035E90500E1DE39 /* RouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BA2035E64C00BC168B /* RouteConvertible.swift */; };
 		0E2FDBF82035E90700E1DE39 /* RouteIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */; };
 		0E2FDBF92035E90A00E1DE39 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4C12035E67B00BC168B /* Tests.swift */; };
 		0E2FDC222035E9C000E1DE39 /* RouteController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FDC142035E9BE00E1DE39 /* RouteController+App.swift */; };
@@ -28,6 +26,7 @@
 		0E2FDC2F2035E9C000E1DE39 /* UNNotificationResponse+RouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FDC212035E9BF00E1DE39 /* UNNotificationResponse+RouteConvertible.swift */; };
 		0E2FDC302035E9DF00E1DE39 /* Scotty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFFC4C82035E7D500BC168B /* Scotty.framework */; };
 		0E2FDC312035E9DF00E1DE39 /* Scotty.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFFC4C82035E7D500BC168B /* Scotty.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EBC275920600E5000370431 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBC275820600E5000370431 /* Route.swift */; };
 		0EFFC4D12035E7D500BC168B /* Scotty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFFC4C82035E7D500BC168B /* Scotty.framework */; };
 		0EFFC4D82035E7D500BC168B /* Scotty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EFFC4CA2035E7D500BC168B /* Scotty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -79,9 +78,8 @@
 		0E2FDC1F2035E9BF00E1DE39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E2FDC202035E9BF00E1DE39 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		0E2FDC212035E9BF00E1DE39 /* UNNotificationResponse+RouteConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNNotificationResponse+RouteConvertible.swift"; sourceTree = "<group>"; };
+		0EBC275820600E5000370431 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		0EFFC4B92035E63E00BC168B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0EFFC4BA2035E64C00BC168B /* RouteConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteConvertible.swift; sourceTree = "<group>"; };
-		0EFFC4BB2035E64C00BC168B /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteActionable.swift; sourceTree = "<group>"; };
 		0EFFC4BD2035E64C00BC168B /* RouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteIdentifier.swift; sourceTree = "<group>"; };
@@ -184,11 +182,10 @@
 		0E84C2A42035F42A00E10E39 /* Scotty */ = {
 			isa = PBXGroup;
 			children = (
-				0EFFC4BB2035E64C00BC168B /* Routable.swift */,
+				0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */,
+				0EBC275820600E5000370431 /* Route.swift */,
 				0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */,
 				0EFFC4BD2035E64C00BC168B /* RouteController.swift */,
-				0EFFC4BA2035E64C00BC168B /* RouteConvertible.swift */,
-				0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */,
 			);
 			path = Scotty;
 			sourceTree = "<group>";
@@ -430,9 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E2FDBF42035E8FF00E1DE39 /* Routable.swift in Sources */,
-				0E2FDBF72035E90500E1DE39 /* RouteConvertible.swift in Sources */,
 				0E2FDBF62035E90300E1DE39 /* RouteController.swift in Sources */,
+				0EBC275920600E5000370431 /* Route.swift in Sources */,
 				0E2FDBF52035E90100E1DE39 /* RouteActionable.swift in Sources */,
 				0E2FDBF82035E90700E1DE39 /* RouteIdentifier.swift in Sources */,
 			);

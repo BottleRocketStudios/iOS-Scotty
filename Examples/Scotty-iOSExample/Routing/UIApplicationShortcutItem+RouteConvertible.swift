@@ -8,10 +8,9 @@
 import Foundation
 import Scotty
 
-extension UIApplicationShortcutItem: RouteConvertible {
-    public typealias RoutableType = AnyRoute<UITabBarController>
-    
-    public var route: AnyRoute<UITabBarController>? {
-		return AnyRoute.route(forIdentifier: type)
+extension UIApplicationShortcutItem {
+
+    public var route: Route<UITabBarController>? {
+		return Route.route(forIdentifier: type)
     }
 }

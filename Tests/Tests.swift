@@ -31,7 +31,7 @@ class Tests: XCTestCase {
 	
 	func testClearOfStoredRoutes() {
 		let routeController = RouteController(rootViewController: UIViewController(), ready: false)
-		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in return true }
+		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
 		routeController.open(testRoute)
 		XCTAssertNotNil(routeController.storedRoute)
 		
@@ -45,7 +45,7 @@ class Tests: XCTestCase {
 	func testAutomaticExecutionOfStoredRoutes() {
 		let exp = expectation(description: "routeExecution")
 		let routeController = RouteController(rootViewController: UIViewController(), ready: false)
-		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in
+		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
 			exp.fulfill()
 			return true
 		}
@@ -61,18 +61,18 @@ class Tests: XCTestCase {
 	
 	func testAutomaticOpeningOfRouteConvertibles() {
 		let routeController = RouteController(rootViewController: UIViewController(), ready: true)
-		XCTAssertTrue(routeController.open(SomeRouteConvertible()))
+		XCTAssertTrue(routeController.open(SomeRouteConvertible().route))
 	}
 	
 	func testHandlingOfRouteConvertibleFailure() {
 		let routeController = RouteController(rootViewController: UIViewController(), ready: true)
-		XCTAssertFalse(routeController.open(FailingRouteConvertible()))
+		XCTAssertFalse(routeController.open(FailingRouteConvertible().route))
 	}
 	
 	func testRouteActionableDestination() {
 		let exp = expectation(description: "routeExecution")
 		let routeController = RouteController(rootViewController: UIViewController())
-		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in
+		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
 			
 			let actionable = ActionableObject()
             actionable.setRouteAction {
@@ -116,8 +116,8 @@ class Tests: XCTestCase {
     }
 	
 	func testNestedAnyRouteInitializers() {
-		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in return true }
-		let nestedRoute = AnyRoute(routable: testRoute)
+		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
+		let nestedRoute = Route(route: testRoute)
 		
 		XCTAssert(testRoute.isSuspendable == nestedRoute.isSuspendable)
 		
@@ -127,8 +127,8 @@ class Tests: XCTestCase {
 	}
 	
 	func testNestedAnyRouteInitializerOverrideSuspendable() {
-		let testRoute = AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in return true }
-		let nestedRoute = AnyRoute(routable: testRoute, suspendable: false)
+		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
+		let nestedRoute = Route(route: testRoute, isSuspendable: false)
 		
 		XCTAssert(testRoute.isSuspendable != nestedRoute.isSuspendable)
 		XCTAssertTrue(testRoute.isSuspendable)
@@ -161,7 +161,7 @@ class Tests: XCTestCase {
     func testRoutablePatternMatching() {
         let e = expectation(description: "pattern match")
         let id = RouteIdentifier(rawValue: "test")
-        let r = AnyRoute(id: id) { _, _ in return true }
+        let r = Route(identifier: id) { _, _ in return true }
         
         switch r {
         case id: e.fulfill()
@@ -172,16 +172,16 @@ class Tests: XCTestCase {
     }
     
 	// MARK: Testing Structs
-	fileprivate struct SomeRouteConvertible: RouteConvertible {
-		var route: AnyRoute<UIViewController>? {
-			return AnyRoute(id: RouteIdentifier(rawValue: "test")) { _, _ in
+	fileprivate struct SomeRouteConvertible {
+		var route: Route<UIViewController>? {
+			return Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
 				return true
 			}
 		}
 	}
 	
-	fileprivate struct FailingRouteConvertible: RouteConvertible {
-		var route: AnyRoute<UIViewController>? {
+	fileprivate struct FailingRouteConvertible {
+		var route: Route<UIViewController>? {
 			return nil
 		}
 	}

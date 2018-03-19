@@ -27,18 +27,6 @@ open class RouteController<RootViewController: UIViewController>: NSObject {
 
 // MARK: Route Processing
 public extension RouteController {
-
-    /// Attempts to open (and execute) any object that conforms to the RouteConvertible protocol, passing in the providing routing options during execution. If routing reaches its intended destination, returns true. Otherwise returns false.
-    ///
-    /// - Parameters:
-    ///   - routeConvertible: The object to be converted to a Routable and executed.
-    ///   - options: Any routing options that should be taken into account when routing.
-    /// - Returns: Returns true if routing reaches its intended destination, otherwise returns false.
-    @discardableResult
-    func open<T: RouteConvertible>(_ routeConvertible: T, options: Routable.Options? = nil) -> Bool where T.RoutableType.RootViewController == RootViewController {
-        guard let route = routeConvertible.route else { return false }
-        return open(route, options: options)
-    }
 	
 	/// Attempts to open (and execute) any object that conforms to the Routable protocol, passing in the providing routing options during execution. If routing reaches its intended destination, returns true. Otherwise returns false.
 	///
@@ -47,9 +35,10 @@ public extension RouteController {
 	///   - options: Any routing options that should be taken into account when routing.
 	/// - Returns: Returns true if routing reaches its intended destination, otherwise returns false.
     @discardableResult
-    func open<T: Routable>(_ routable: T, options: Routable.Options? = nil) -> Bool where T.RootViewController == RootViewController {
-        guard isPreparedForRouting || !routable.isSuspendable else { storedRoute = stored(routable: routable, options: options); return false }
-        return routable.route(fromRootViewController: rootViewController, options: options)
+    func open(_ route: Route<RootViewController>?, options: Route<RootViewController>.Options? = nil) -> Bool {
+        guard let route = route else { return false }
+        guard isPreparedForRouting || !route.isSuspendable else { storedRoute = stored(route: route, options: options); return false }
+        return route.route(fromRootViewController: rootViewController, options: options)
     }
 }
 
@@ -115,9 +104,9 @@ fileprivate extension RouteController {
 // MARK: Route Storage
 fileprivate extension RouteController {
     
-    func stored<T: Routable> (routable: T, options: Routable.Options?) -> () -> Void where T.RootViewController == RootViewController {
+    func stored(route: Route<RootViewController>, options: Route<RootViewController>.Options?) -> () -> Void {
         return { [weak self] in
-            self?.open(routable, options: options)
+            self?.open(route, options: options)
         }
     }
 }

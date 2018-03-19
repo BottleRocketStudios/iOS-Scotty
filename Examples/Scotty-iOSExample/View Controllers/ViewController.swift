@@ -25,7 +25,7 @@ class ViewController: UIViewController, RouteActionable {
 	
 	// MARK: Actions
     @IBAction func goToMiddle() {
-        Router.default.open(AnyRoute.middleTab)
+        Router.default.open(.middleTab)
     }
     
     @IBAction func triggerNotification() {

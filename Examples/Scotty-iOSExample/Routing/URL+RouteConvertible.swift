@@ -8,11 +8,10 @@
 import Foundation
 import Scotty
 
-extension URL: RouteConvertible {
-    public typealias RoutableType = AnyRoute<UITabBarController>
-    
-    public var route: AnyRoute<UITabBarController>? {
+extension URL {
+
+    public var route: Route<UITabBarController>? {
         let components = URLComponents(url: self, resolvingAgainstBaseURL: false)!
-		return AnyRoute.route(forIdentifier: components.path)
+		return Route.route(forIdentifier: components.path)
     }
 }

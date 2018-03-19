@@ -10,10 +10,9 @@ import UserNotifications
 import Scotty
 
 @available(iOS 10.0, *)
-extension UNNotificationResponse: RouteConvertible {
-    public typealias RoutableType = AnyRoute<UITabBarController>
-    
-    public var route: AnyRoute<UITabBarController>? {
-		return AnyRoute.route(forIdentifier: actionIdentifier)
+extension UNNotificationResponse {
+
+    public var route: Route<UITabBarController>? {
+		return Route.route(forIdentifier: actionIdentifier)
     }
 }
