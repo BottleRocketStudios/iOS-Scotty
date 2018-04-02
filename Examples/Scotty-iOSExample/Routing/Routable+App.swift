@@ -22,8 +22,8 @@ extension Route where RootViewController == UITabBarController {
 		return Route(identifier: .leftTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 0
             
-            if let routeActionableController = rootViewController.selectedViewController as? RouteActionable {
-                routeActionableController.setRouteAction {
+            if let routeRespondableController = rootViewController.selectedViewController as? RouteRespondable {
+                routeRespondableController.setRouteAction {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         print("LeftTab successfully reached!")
                     }

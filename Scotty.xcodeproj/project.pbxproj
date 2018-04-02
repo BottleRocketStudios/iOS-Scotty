@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E2FDBF52035E90100E1DE39 /* RouteActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */; };
+		0E2FDBF52035E90100E1DE39 /* RouteRespondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BC2035E64C00BC168B /* RouteRespondable.swift */; };
 		0E2FDBF62035E90300E1DE39 /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BD2035E64C00BC168B /* RouteController.swift */; };
 		0E2FDBF82035E90700E1DE39 /* RouteIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */; };
 		0E2FDBF92035E90A00E1DE39 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4C12035E67B00BC168B /* Tests.swift */; };
@@ -80,7 +80,7 @@
 		0E2FDC212035E9BF00E1DE39 /* UNNotificationResponse+RouteConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNNotificationResponse+RouteConvertible.swift"; sourceTree = "<group>"; };
 		0EBC275820600E5000370431 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		0EFFC4B92035E63E00BC168B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteActionable.swift; sourceTree = "<group>"; };
+		0EFFC4BC2035E64C00BC168B /* RouteRespondable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRespondable.swift; sourceTree = "<group>"; };
 		0EFFC4BD2035E64C00BC168B /* RouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteIdentifier.swift; sourceTree = "<group>"; };
 		0EFFC4C12035E67B00BC168B /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			children = (
 				0EFFC4BE2035E64C00BC168B /* RouteIdentifier.swift */,
 				0EBC275820600E5000370431 /* Route.swift */,
-				0EFFC4BC2035E64C00BC168B /* RouteActionable.swift */,
+				0EFFC4BC2035E64C00BC168B /* RouteRespondable.swift */,
 				0EFFC4BD2035E64C00BC168B /* RouteController.swift */,
 			);
 			path = Scotty;
@@ -323,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Bottle Rocket Studios";
 				TargetAttributes = {
 					0E2FDBFD2035E97F00E1DE39 = {
@@ -429,7 +429,7 @@
 			files = (
 				0E2FDBF62035E90300E1DE39 /* RouteController.swift in Sources */,
 				0EBC275920600E5000370431 /* Route.swift in Sources */,
-				0E2FDBF52035E90100E1DE39 /* RouteActionable.swift in Sources */,
+				0E2FDBF52035E90100E1DE39 /* RouteRespondable.swift in Sources */,
 				0E2FDBF82035E90700E1DE39 /* RouteIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +507,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -514,6 +515,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -564,6 +566,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -571,6 +574,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

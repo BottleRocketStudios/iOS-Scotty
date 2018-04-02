@@ -104,11 +104,11 @@ class Tests: XCTestCase {
 	}
     
     func testRouteActionExecutesImmediatelyIfReady() {
-        let ob = ActionableObject()
-        ob.isPreparedForAction = true
+        let obj = ActionableObject()
+        obj.isPreparedForAction = true
         
         let exp = expectation(description: "executesImmediately")
-        ob.setRouteAction {
+        obj.setRouteAction {
             exp.fulfill()
         }
         
@@ -136,22 +136,22 @@ class Tests: XCTestCase {
 	}
 	
 	func testRouteIdentifierEquality() {
-		let a = RouteIdentifier(rawValue: "a")
-		let b = RouteIdentifier(rawValue: "b")
-		let c = RouteIdentifier(rawValue: "a")
+		let idA = RouteIdentifier(rawValue: "a")
+		let idB = RouteIdentifier(rawValue: "b")
+		let idC = RouteIdentifier(rawValue: "a")
 		
-		XCTAssert(a == c)
-		XCTAssertFalse(a == b)
+		XCTAssert(idA == idC)
+		XCTAssertFalse(idA == idB)
 	}
     
     func testRouteIdentifierPatternMatching() {
-        let e = expectation(description: "pattern match")
-        let a = RouteIdentifier(rawValue: "a")
-        let b = RouteIdentifier(rawValue: "b")
+        let exp = expectation(description: "pattern match")
+        let idA = RouteIdentifier(rawValue: "a")
+        let idB = RouteIdentifier(rawValue: "b")
         
-        switch a {
-        case b: XCTFail("Incorrect match.")
-        case a: e.fulfill()
+        switch idA {
+        case idB: XCTFail("Incorrect match.")
+        case idA: exp.fulfill()
         default: XCTFail("Incorrect match.")
         }
         
@@ -159,12 +159,12 @@ class Tests: XCTestCase {
     }
     
     func testRoutablePatternMatching() {
-        let e = expectation(description: "pattern match")
+        let exp = expectation(description: "pattern match")
         let id = RouteIdentifier(rawValue: "test")
-        let r = Route(identifier: id) { _, _ in return true }
+        let route = Route(identifier: id) { _, _ in return true }
         
-        switch r {
-        case id: e.fulfill()
+        switch route {
+        case id: exp.fulfill()
         default: XCTFail("Incorrect match.")
         }
         
@@ -186,8 +186,8 @@ class Tests: XCTestCase {
 		}
 	}
 	
-	fileprivate class ActionableObject: RouteActionable {
+	fileprivate class ActionableObject: RouteRespondable {
         var isPreparedForAction: Bool = false
-		var routeAction: RouteAction?
+		var routeAction: Action?
 	}
 }

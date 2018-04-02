@@ -9,7 +9,7 @@ import UIKit
 import UserNotifications
 import Scotty
 
-class ViewController: UIViewController, RouteActionable {
+class ViewController: UIViewController, RouteRespondable {
 
     // MARK: Properties
     var isPreparedForAction: Bool = false
