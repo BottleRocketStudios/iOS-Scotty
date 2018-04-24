@@ -7,17 +7,17 @@
 
 import Foundation
 
-/// The RouteActionable protocol is adopted by an object that can execute its routeAction at some point during its lifecycle.
-public protocol RouteActionable: class {
+/// The RouteRespondable protocol is adopted by an object that can execute its routeAction at some point during its lifecycle.
+public protocol RouteRespondable: class {
     
     /// Represents an action to be performed by the conforming object when it deems itself ready to do so.
-    typealias RouteAction = () -> Void
+    typealias Action = () -> Void
     
     /// Controls when any route actions associated with this object are executed.
     var isPreparedForAction: Bool { get set }
     
     /// An optional closure to be executed when the object deems itself ready to do so.
-    var routeAction: RouteAction? { get set }
+    var routeAction: Action? { get set }
     
     /// Instructs the object it is the 'prepared' state for handling route actions.
     ///
@@ -27,10 +27,10 @@ public protocol RouteActionable: class {
     /// Instructs the object to perform this action when it deems itself ready to do so.
     ///
     /// - Parameter action: The action that will be executed when prepared.
-    func setRouteAction(_ action: @escaping RouteAction)
+    func setRouteAction(_ action: @escaping Action)
 }
 
-public extension RouteActionable {
+public extension RouteRespondable {
     
     func setPreparedForAction(_ prepared: Bool) {
         isPreparedForAction = prepared
@@ -42,7 +42,7 @@ public extension RouteActionable {
         }
     }
 
-    func setRouteAction(_ action: @escaping RouteAction) {
+    func setRouteAction(_ action: @escaping Action) {
         
         //If the object is already prepared, immediately execute and do not store the action.
         guard !isPreparedForAction else { return action() }

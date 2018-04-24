@@ -16,14 +16,14 @@ extension RouteIdentifier {
 }
 
 // MARK: Define Specialized Routes
-extension AnyRoute where RootViewController == UITabBarController {
+extension Route where RootViewController == UITabBarController {
 	    
-    static var leftTab: AnyRoute {
-		return AnyRoute(id: .leftTabRoute) { rootViewController, _ -> Bool in
+    static var leftTab: Route {
+		return Route(identifier: .leftTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 0
             
-            if let routeActionableController = rootViewController.selectedViewController as? RouteActionable {
-                routeActionableController.setRouteAction {
+            if let routeRespondableController = rootViewController.selectedViewController as? RouteRespondable {
+                routeRespondableController.setRouteAction {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         print("LeftTab successfully reached!")
                     }
@@ -34,15 +34,15 @@ extension AnyRoute where RootViewController == UITabBarController {
         }
     }
     
-    static var middleTab: AnyRoute {
-        return AnyRoute(id: .middleTabRoute) { rootViewController, _ -> Bool in
+    static var middleTab: Route {
+        return Route(identifier: .middleTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 1
             return true
         }
     }
     
-    static var rightTab: AnyRoute {
-        return AnyRoute(id: .rightTabRoute) { rootViewController, _ -> Bool in
+    static var rightTab: Route {
+        return Route(identifier: .rightTabRoute) { rootViewController, _ -> Bool in
             rootViewController.selectedIndex = 2
             return true
         }
@@ -50,9 +50,9 @@ extension AnyRoute where RootViewController == UITabBarController {
 }
 
 // MARK: Helper
-extension AnyRoute where RootViewController == UITabBarController {
+extension Route where RootViewController == UITabBarController {
 	
-	static func route(forIdentifier identifier: String) -> AnyRoute? {
+	static func route(forIdentifier identifier: String) -> Route? {
 		if identifier.contains(RouteIdentifier.leftTabRoute.rawValue) {
 			return leftTab
 		} else if identifier.contains(RouteIdentifier.middleTabRoute.rawValue) {

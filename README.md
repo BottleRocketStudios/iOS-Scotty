@@ -78,8 +78,8 @@ extension AnyRoute where RootViewController == UITabBarController {
 		return AnyRoute(id: "leftTab") { rootViewController, options -> Bool in
             rootViewController.selectedIndex = 0
 
-            if let routeActionableController = rootViewController.selectedViewController as? RouteActionable {
-                routeActionableController.routeAction = RouteAction {
+            if let routeRespondableController = rootViewController.selectedViewController as? RouteRespondable {
+                routeRespondableController.setRouteAction {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                         print("EVERYTHING IS AWESOME!")
                     }
@@ -97,7 +97,7 @@ The above example creates a static instance of the AnyRoute struct designed to t
 The trailing closure is the mechanism of routing. Given the instance of your root view controller, as well as any options provided with the routing request, this closure should execute the required changes to the view controller hierarchy to reach the destination. If the destination can successfully be reached, this closure should return true. Otherwise, it should return false.
 
 ### Route Actions
-Route Actions are closures that can be executed at particular route destinations. If the route conforms to the RouteActionable protocol, it will have a public routeAction property which can be set inside the route. When this destination is reached, it will indicate to the routeAction an appropriate time at which to execute.
+Route Actions are closures that can be executed at particular route destinations. If the route conforms to the RouteRespondable protocol, it will have a public routeAction property which can be set inside the route. When this destination is reached, it will indicate to the routeAction an appropriate time at which to execute.
 
 ### Example
 

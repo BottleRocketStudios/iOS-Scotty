@@ -12,6 +12,6 @@ class OtherViewController: UIViewController {
 	
 	// MARK: Actions
     @IBAction func goToRight() {
-        Router.default.open(AnyRoute.rightTab)
+        Router.default.open(.rightTab)
     }
 }
