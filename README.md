@@ -46,42 +46,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-In order to make URL/NSUserActivity/UIApplicationShortcutItem compatible with the RouteController, they will need to be extended to conform to the RouteConvertible protocol. A simple implementation might look like this:
+In order to make `URL`/`NSUserActivity`/`UIApplicationShortcutItem` compatible with the `RouteController`, they will need to be extended to vend `Route` objects. A simple implementation might look like this:
 
 ``` swift
-extension URL: RouteConvertible {
+extension URL {
 
-    public var route: AnyRoute<UITabBarController>? {
+    public var route: Route<UITabBarController>? {
         let components = URLComponents(url: self, resolvingAgainstBaseURL: false)!
-
-		if components.path.contains("leftTab") {
-			return .leftTab
-		} else if components.path.contains("middleTab") {
-			return .middleTab
-		} else if components.path.contains("rightTab") {
-			return .rightTab
-		}
-
-		return nil
+        return Route.route(forIdentifier: components.path)
     }
 }
 ```
 
-When dealing with URLs, in addition to conforming to RouteConvertible, you will also need to configure your app with its own URL scheme. More information on this process is available from [Apple](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1).
+When dealing with URLs, in addition to vending `Route` objects, you will also need to configure your app with its own URL scheme. More information on this process is available from [Apple](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1).
 
 ### Creating Routes
-Creating a new route is as simple as creating a new object that conforms to the Routable protocol. This can be done by creating a custom type that conforms to this protocol (this will allow for greater customization) or by simply constructing instances of the AnyRoute struct, which is provided as a convenience object that already conforms to the Routable protocol.
+Creating a new route is as simple as creating a new `Route` instance.
 
 ``` swift
-extension AnyRoute where RootViewController == UITabBarController {
-    static var leftTab: AnyRoute {
-		return AnyRoute(id: "leftTab") { rootViewController, options -> Bool in
+extension Route where RootViewController == UITabBarController {
+    static var leftTab: Route {
+		return Route(identifier: .leftTabRoute) { rootViewController, options -> Bool in
             rootViewController.selectedIndex = 0
 
             if let routeRespondableController = rootViewController.selectedViewController as? RouteRespondable {
                 routeRespondableController.setRouteAction {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        print("EVERYTHING IS AWESOME!")
+                        print("LeftTab successfully reached!")
                     }
                 }
             }
@@ -92,7 +83,7 @@ extension AnyRoute where RootViewController == UITabBarController {
 }
 ```
 
-The above example creates a static instance of the AnyRoute struct designed to travel to the leftmost tab of the sample application. The identifier is used to differentiate this route from others and to make it simpler to convert a RouteConvertible type into a Routable one.
+The above example creates a static instance of the `Route` struct designed to travel to the leftmost tab of the sample application. The identifier is used to differentiate this route from others when converting between types that vend routes (such as `URL`).
 
 The trailing closure is the mechanism of routing. Given the instance of your root view controller, as well as any options provided with the routing request, this closure should execute the required changes to the view controller hierarchy to reach the destination. If the destination can successfully be reached, this closure should return true. Otherwise, it should return false.
 
