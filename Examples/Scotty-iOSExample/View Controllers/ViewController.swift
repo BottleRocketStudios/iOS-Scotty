@@ -13,7 +13,7 @@ class ViewController: UIViewController, RouteRespondable {
 
     // MARK: Properties
     var isPreparedForAction: Bool = false
-    var routeAction: RouteAction?
+    var routeAction: RouteRespondable.Action?
 
 	// MARK: Lifecycle
     override func viewDidAppear(_ animated: Bool) {

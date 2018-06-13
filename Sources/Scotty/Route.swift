@@ -9,17 +9,16 @@
 import Foundation
 
 public struct Route<RootViewController: UIViewController> {
-    public typealias Options = [AnyHashable: Any]
-    public typealias Navigator = (_ rootViewController: RootViewController, _ options: Options?) -> Bool
+    public typealias Navigator = (_ rootViewController: RootViewController, _ options: [AnyHashable: Any]?) -> Bool
     
     // MARK: Properties
     private let navigator: Navigator
 
     /// Determines if this Routable object can be suspended by its executing RouteController. If this property is set to false, this route will always execute immediately.
-    let isSuspendable: Bool
+    public let isSuspendable: Bool
     
     /// A unique identifier for this Routable object. Should be unique among all routes an application supports.
-    let identifier: RouteIdentifier
+    public let identifier: RouteIdentifier
     
     // MARK: Initializers
     
@@ -51,7 +50,7 @@ public struct Route<RootViewController: UIViewController> {
     ///   - rootViewController: The view controller at the root of the navigation hierarchy.
     ///   - options: Any routing options that should be taken into account when routing.
     /// - Returns: Return true if the routing is successful, false otherwise.
-    func route(fromRootViewController rootViewController: RootViewController, options: Options?) -> Bool {
+    func route(fromRootViewController rootViewController: RootViewController, options: [AnyHashable: Any]?) -> Bool {
         return navigator(rootViewController, options)
     }
 }
