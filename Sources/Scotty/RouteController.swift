@@ -35,7 +35,7 @@ public extension RouteController {
 	///   - options: Any routing options that should be taken into account when routing.
 	/// - Returns: Returns true if routing reaches its intended destination, otherwise returns false.
     @discardableResult
-    func open(_ route: Route<RootViewController>?, options: Route<RootViewController>.Options? = nil) -> Bool {
+    func open(_ route: Route<RootViewController>?, options: [AnyHashable: Any]? = nil) -> Bool {
         guard let route = route else { return false }
         guard isPreparedForRouting || !route.isSuspendable else { storedRoute = stored(route: route, options: options); return false }
         return route.route(fromRootViewController: rootViewController, options: options)
@@ -104,7 +104,7 @@ fileprivate extension RouteController {
 // MARK: Route Storage
 fileprivate extension RouteController {
     
-    func stored(route: Route<RootViewController>, options: Route<RootViewController>.Options?) -> () -> Void {
+    func stored(route: Route<RootViewController>, options: [AnyHashable: Any]?) -> () -> Void {
         return { [weak self] in
             self?.open(route, options: options)
         }
