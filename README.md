@@ -12,7 +12,6 @@ This library provides a simple abstraction around the various entry points to an
 
 ### Key Concepts
 * Route - An abstract representation of the code required to move your application from its root state to a specific final destination.
-* RouteConvertible - Any object can conform to this protocol to indicate that it can be converted into a Route and opened
 * RouteController - An object that is created with a root view controller, and handles the execution of Routes.
 * RouteAction - An action that can be taken by the destination of a Route when travel has completed.
 
@@ -96,7 +95,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Requirements
 
-Requires iOS 9.0 +, Swift 3.2
+Requires iOS 9.0 +, Swift 4.1
 
 ### Installation - CocoaPods
 
