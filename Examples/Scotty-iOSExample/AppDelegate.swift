@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
 	
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
 		configureUserNotificationCenter()
 		configureIndexableItems()
@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 	}
 	
 	// MARK: State Restoration
-	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
 		return Router.default.open(url.route)
 	}
-	
-	func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-		return Router.default.open(userActivity.route)
-	}
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        return Router.default.open(userActivity.route)
+    }
 	
 	func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
 		completionHandler(Router.default.open(shortcutItem.route))
@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 // MARK: App Configuration
 extension AppDelegate {
 	
-	func handleLaunchOptionsRoute(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func handleLaunchOptionsRoute(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		if let url = launchOptions?[.url] as? URL {
 			return Router.default.open(url.route)
 		} else if let shortcutItem = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem {
@@ -70,7 +70,7 @@ extension AppDelegate {
 		return false
 	}
 	
-	func launchOptionsContainsRoute(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func launchOptionsContainsRoute(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if launchOptions?[.url] as? URL != nil {
 			return true
 		} else if launchOptions?[.shortcutItem] as? UIApplicationShortcutItem != nil {
