@@ -2,9 +2,24 @@
 
 ##### Enhancements
 
+* None.
+
+##### Bug Fixes
+
+* None.
+
+
+## 2.0.1 (2018-09-20)
+
+##### Enhancements
+
 * Updated Travis-CI image to Xcode 9.4.
   [Tyler Milner](https://github.com/tylermilner)
   [#18](https://github.com/BottleRocketStudios/iOS-Scotty/pull/18)
+
+* Updated project for Xcode 10.
+  [Tyler Milner](https://github.com/tylermilner)
+  [#20](https://github.com/BottleRocketStudios/iOS-Scotty/pull/20)
 
 ##### Bug Fixes
 
