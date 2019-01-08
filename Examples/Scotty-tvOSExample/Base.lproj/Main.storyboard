@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.16" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mMJ-Dv-9fX">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Left-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Left" id="BYZ-38-t0r" customClass="LeftViewController" customModule="Scotty_tvOSExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,12 +21,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkD-Ee-q9J">
+                                <rect key="frame" x="808" y="497" width="304" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Go To Middle"/>
+                                <connections>
+                                    <action selector="sendToMiddle:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="KRa-mw-GhR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Left" id="PRF-Ab-0J2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-635" y="-2137"/>
+        </scene>
+        <!--Right-->
+        <scene sceneID="sl7-33-zxS">
+            <objects>
+                <viewController id="ft9-7a-b4g" customClass="RightViewController" customModule="Scotty_tvOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="reo-4k-dhT"/>
+                        <viewControllerLayoutGuide type="bottom" id="9j2-AY-Pda"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CM7-fE-7i6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cir-d1-UqB">
+                                <rect key="frame" x="833" y="497" width="255" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Go To Left"/>
+                                <connections>
+                                    <action selector="goToLeft" destination="ft9-7a-b4g" eventType="primaryActionTriggered" id="woi-tJ-xDm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99854093789999998" green="0.84955823419999998" blue="0.56983619929999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ACb-SY-drn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Right" id="3Bj-F5-fdf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he7-A7-mka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="1924"/>
+        </scene>
+        <!--Middle-->
+        <scene sceneID="ae1-Tf-ojv">
+            <objects>
+                <viewController id="d6G-lV-tIw" customClass="MiddleViewController" customModule="Scotty_tvOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vic-dZ-Lkv"/>
+                        <viewControllerLayoutGuide type="bottom" id="vYX-p6-lMG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Qf-G4-wfp">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTD-j3-ZQt">
+                                <rect key="frame" x="822" y="497" width="278" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Go To Right"/>
+                                <connections>
+                                    <action selector="goToRight" destination="d6G-lV-tIw" eventType="primaryActionTriggered" id="lzG-81-RmR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="zxa-Ga-PjH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Middle" id="0Fq-Lz-gaI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsk-NX-klN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="-164"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="13z-mz-WIn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mMJ-Dv-9fX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dxd-7Q-lee">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3YG-LW-IeE"/>
+                        <segue destination="d6G-lV-tIw" kind="relationship" relationship="viewControllers" id="2pQ-Ut-kVX"/>
+                        <segue destination="ft9-7a-b4g" kind="relationship" relationship="viewControllers" id="sak-eG-d4q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKv-Kz-vBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3093" y="-164"/>
         </scene>
     </scenes>
 </document>

@@ -5,7 +5,7 @@
 //  Copyright © 2017 Bottle Rocket Studios. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// The RouteController object handles the execution of routes as entry points into your application.
 /// The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.

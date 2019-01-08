@@ -30,7 +30,6 @@
 		0EFFC4D12035E7D500BC168B /* Scotty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFFC4C82035E7D500BC168B /* Scotty.framework */; };
 		0EFFC4D82035E7D500BC168B /* Scotty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EFFC4CA2035E7D500BC168B /* Scotty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CAD856021E5142600655A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD855F21E5142600655A93 /* AppDelegate.swift */; };
-		1CAD856221E5142600655A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD856121E5142600655A93 /* ViewController.swift */; };
 		1CAD856521E5142600655A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAD856321E5142600655A93 /* Main.storyboard */; };
 		1CAD856721E5142C00655A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CAD856621E5142C00655A93 /* Assets.xcassets */; };
 		1CAD859E21E518F900655A93 /* Scotty_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CAD858921E518F900655A93 /* Scotty_tvOS.framework */; };
@@ -40,8 +39,14 @@
 		1CAD85A821E5192200655A93 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBC275820600E5000370431 /* Route.swift */; };
 		1CAD85A921E5192200655A93 /* RouteRespondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BC2035E64C00BC168B /* RouteRespondable.swift */; };
 		1CAD85AA21E5192200655A93 /* RouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4BD2035E64C00BC168B /* RouteController.swift */; };
-		1CAD85B021E519C900655A93 /* Scotty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFFC4C82035E7D500BC168B /* Scotty.framework */; };
 		1CAD85B121E51A0800655A93 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC4C12035E67B00BC168B /* Tests.swift */; };
+		1CAD85B821E5209F00655A93 /* Scotty_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CAD858921E518F900655A93 /* Scotty_tvOS.framework */; };
+		1CAD85BF21E52BA600655A93 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD856121E5142600655A93 /* LeftViewController.swift */; };
+		1CAD85C121E52BEC00655A93 /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD85B321E51EC000655A93 /* MiddleViewController.swift */; };
+		1CAD85C221E52BEF00655A93 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD85B621E51EEA00655A93 /* RightViewController.swift */; };
+		1CAD85D821E53C5500655A93 /* Routable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD85C621E53BC900655A93 /* Routable+App.swift */; };
+		1CAD85D921E53C5500655A93 /* RouteController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD85C821E53BEC00655A93 /* RouteController+App.swift */; };
+		1CAD85DC21E53C5500655A93 /* URL+RouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD85CE21E53C3100655A93 /* URL+RouteConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,12 +134,17 @@
 		0EFFC4D02035E7D500BC168B /* Scotty-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scotty-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAD855D21E5142600655A93 /* Scotty-tvOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scotty-tvOSExample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAD855F21E5142600655A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CAD856121E5142600655A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CAD856121E5142600655A93 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		1CAD856421E5142600655A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CAD856621E5142C00655A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CAD856821E5142C00655A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CAD858921E518F900655A93 /* Scotty_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Scotty_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAD859121E518F900655A93 /* Scotty-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scotty-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CAD85B321E51EC000655A93 /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
+		1CAD85B621E51EEA00655A93 /* RightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		1CAD85C621E53BC900655A93 /* Routable+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routable+App.swift"; sourceTree = "<group>"; };
+		1CAD85C821E53BEC00655A93 /* RouteController+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteController+App.swift"; sourceTree = "<group>"; };
+		1CAD85CE21E53C3100655A93 /* URL+RouteConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+RouteConvertible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CAD85B021E519C900655A93 /* Scotty.framework in Frameworks */,
+				1CAD85B821E5209F00655A93 /* Scotty_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +333,9 @@
 		1CAD855E21E5142600655A93 /* Scotty-tvOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				1CAD85C321E53B8B00655A93 /* Routing */,
+				1CAD85B221E51DBB00655A93 /* View Controllers */,
 				1CAD855F21E5142600655A93 /* AppDelegate.swift */,
-				1CAD856121E5142600655A93 /* ViewController.swift */,
 				1CAD856321E5142600655A93 /* Main.storyboard */,
 				1CAD856621E5142C00655A93 /* Assets.xcassets */,
 				1CAD856821E5142C00655A93 /* Info.plist */,
@@ -337,6 +348,26 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CAD85B221E51DBB00655A93 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1CAD856121E5142600655A93 /* LeftViewController.swift */,
+				1CAD85B321E51EC000655A93 /* MiddleViewController.swift */,
+				1CAD85B621E51EEA00655A93 /* RightViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1CAD85C321E53B8B00655A93 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				1CAD85C621E53BC900655A93 /* Routable+App.swift */,
+				1CAD85C821E53BEC00655A93 /* RouteController+App.swift */,
+				1CAD85CE21E53C3100655A93 /* URL+RouteConvertible.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,7 +629,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -643,8 +674,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CAD856221E5142600655A93 /* ViewController.swift in Sources */,
+				1CAD85D921E53C5500655A93 /* RouteController+App.swift in Sources */,
 				1CAD856021E5142600655A93 /* AppDelegate.swift in Sources */,
+				1CAD85C221E52BEF00655A93 /* RightViewController.swift in Sources */,
+				1CAD85DC21E53C5500655A93 /* URL+RouteConvertible.swift in Sources */,
+				1CAD85BF21E52BA600655A93 /* LeftViewController.swift in Sources */,
+				1CAD85C121E52BEC00655A93 /* MiddleViewController.swift in Sources */,
+				1CAD85D821E53C5500655A93 /* Routable+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,8 +974,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ53H63975;
-				INFOPLIST_FILE = "Scotty-tvOSExample/Info.plist";
+				DEVELOPMENT_TEAM = AJSV2L9F8Q;
+				INFOPLIST_FILE = "$(SRCROOT)/Examples/Scotty-tvOSExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -960,8 +996,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ53H63975;
-				INFOPLIST_FILE = "Scotty-tvOSExample/Info.plist";
+				DEVELOPMENT_TEAM = AJSV2L9F8Q;
+				INFOPLIST_FILE = "$(SRCROOT)/Examples/Scotty-tvOSExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fernandoarocho.Scotty-tvOSExample";
@@ -985,7 +1021,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Scotty-tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Examples/Scotty-tvOSExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1014,7 +1050,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Scotty-tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Examples/Scotty-tvOSExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
