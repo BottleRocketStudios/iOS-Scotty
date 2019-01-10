@@ -6,7 +6,7 @@
 //  Copyright © 2018 Bottle Rocket Studios. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public struct Route<RootViewController: UIViewController> {
     public typealias Navigator = (_ rootViewController: RootViewController, _ options: [AnyHashable: Any]?) -> Bool
