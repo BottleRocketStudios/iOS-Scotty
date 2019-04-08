@@ -29,6 +29,7 @@
 		0EBC275920600E5000370431 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBC275820600E5000370431 /* Route.swift */; };
 		0EFFC4D12035E7D500BC168B /* Scotty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFFC4C82035E7D500BC168B /* Scotty.framework */; };
 		0EFFC4D82035E7D500BC168B /* Scotty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EFFC4CA2035E7D500BC168B /* Scotty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F525712257FA6B0052B8E7 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 62F525702257FA6B0052B8E7 /* CHANGELOG.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		0EFFC4CA2035E7D500BC168B /* Scotty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scotty.h; sourceTree = "<group>"; };
 		0EFFC4CB2035E7D500BC168B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFFC4D02035E7D500BC168B /* Scotty-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scotty-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F525702257FA6B0052B8E7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				0EFFC4B92035E63E00BC168B /* README.md */,
+				62F525702257FA6B0052B8E7 /* CHANGELOG.md */,
 				0EFFC4B72035E62700BC168B /* Sources */,
 				0EFFC4B82035E62E00BC168B /* Tests */,
 				0E2FDC122035E98800E1DE39 /* Examples */,
@@ -328,17 +331,17 @@
 				TargetAttributes = {
 					0E2FDBFD2035E97F00E1DE39 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					0EFFC4C72035E7D500BC168B = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					0EFFC4CF2035E7D500BC168B = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -378,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F525712257FA6B0052B8E7 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bottlerocketstudios.Scotty-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -490,7 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bottlerocketstudios.Scotty-iOSExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -551,6 +555,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSION = 2.0.1;
 			};
 			name = Debug;
@@ -603,6 +608,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSION = 2.0.1;
 			};
@@ -626,7 +632,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bottlerocketstudios.Scotty-iOS";
 				PRODUCT_NAME = Scotty;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -651,7 +657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bottlerocketstudios.Scotty-iOS";
 				PRODUCT_NAME = Scotty;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -667,7 +673,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bottlerocketstudios.Scotty-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -681,7 +687,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bottlerocketstudios.Scotty-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
