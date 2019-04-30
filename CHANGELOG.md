@@ -2,6 +2,15 @@
 
 ##### Enhancements
 
+##### Bug Fixes
+
+* None.
+
+
+## 2.0.1 (2019-04-30)
+
+##### Enhancements
+
 * Migrate to Swift 5.0.
 [Earl Gaspard](https://github.com/earlgaspard)
 [#25](https://github.com/BottleRocketStudios/iOS-Scotty/pull/25)
