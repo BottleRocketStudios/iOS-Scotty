@@ -95,7 +95,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Requirements
 
-Requires iOS 9.0 +, Swift 4.1
+* iOS 9.0+
+* Swift 5.0
 
 ### Installation - CocoaPods
 

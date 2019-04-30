@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Scotty'
-  s.version          = '2.0.1'
+  s.version          = '2.1.0'
   s.summary          = 'A framework designed to make app routing simpler and safer.'
 
   s.description      = <<-DESC
@@ -20,6 +20,7 @@ Scotty provides a simple abstraction around the various entry points to an iOS a
   s.author           = { 'Bottle Rocket Studios' => 'will.mcginty@bottlerocketstudios.com' }
   s.source           = { :git => 'https://github.com/bottlerocketstudios/iOS-Scotty.git', :tag => s.version.to_s }
 
+  s.swift_version = '5.0'
   s.ios.deployment_target = '9.0'
   s.source_files = 'Sources/Scotty/**/*'
   s.frameworks = 'Foundation', 'UIKit'
