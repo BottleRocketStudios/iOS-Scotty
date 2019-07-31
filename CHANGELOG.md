@@ -4,7 +4,7 @@
 
 * Added Carthage support.
 [Ryan Gant](https://github.com/ganttastic)
-[#28](https://github.com/BottleRocketStudios/iOS-Scotty/pull/28)
+[#29](https://github.com/BottleRocketStudios/iOS-Scotty/pull/29)
 
 ##### Bug Fixes
 
