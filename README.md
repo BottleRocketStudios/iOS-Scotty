@@ -2,6 +2,7 @@ Scotty
 ============
 [![CI Status](http://img.shields.io/travis/BottleRocketStudios/iOS-Scotty.svg?style=flat)](https://travis-ci.org/BottleRocketStudios/iOS-Scotty)
 [![Version](https://img.shields.io/cocoapods/v/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![Platform](https://img.shields.io/cocoapods/p/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![codecov](https://codecov.io/gh/BottleRocketStudios/iOS-Scotty/branch/master/graph/badge.svg)](https://codecov.io/gh/BottleRocketStudios/iOS-Scotty)
@@ -98,7 +99,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 * iOS 9.0+
 * Swift 5.0
 
-### Installation - CocoaPods
+### Installation 
+
+#### CocoaPods
 
 [CocoaPods]: http://cocoapods.org
 
@@ -115,6 +118,16 @@ use_frameworks!
 ```
 
 Then run `pod install` with CocoaPods 0.36 or newer.
+
+#### Carthage
+
+Add the following to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
+
+```
+github "BottleRocketStudios/iOS-Scotty"
+```
+
+Run `carthage update` and follow the steps as described in Carthage's [README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
 
 ### Contributing
 
