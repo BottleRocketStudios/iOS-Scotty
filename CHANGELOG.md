@@ -2,6 +2,10 @@
 
 ##### Enhancements
 
+* Added Carthage support.
+[Ryan Gant](https://github.com/ganttastic)
+[#28](https://github.com/BottleRocketStudios/iOS-Scotty/pull/28)
+
 ##### Bug Fixes
 
 * None.
