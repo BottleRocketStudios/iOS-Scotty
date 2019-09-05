@@ -12,13 +12,13 @@ import Foundation
 open class RouteController<Root>: NSObject {
     
     // MARK: Properties
-	fileprivate let rootViewController: Root
+	fileprivate let root: Root
     fileprivate(set) var isPreparedForRouting = false
 	fileprivate(set) var storedRoute: (() -> Void)?
     
     // MARK: Initializers
-    public init(rootViewController: Root, ready: Bool = true) {
-        self.rootViewController = rootViewController
+    public init(root: Root, ready: Bool = true) {
+        self.root = root
         super.init()
         
         setRouteHandling(enabled: ready)
@@ -38,7 +38,7 @@ public extension RouteController {
     func open(_ route: Route<Root>?, options: [AnyHashable: Any]? = nil) -> Bool {
         guard let route = route else { return false }
         guard isPreparedForRouting || !route.isSuspendable else { storedRoute = stored(route: route, options: options); return false }
-        return route.route(fromRootViewController: rootViewController, options: options)
+        return route.route(fromRoot: root, options: options)
     }
 }
 

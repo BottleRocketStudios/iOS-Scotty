@@ -50,8 +50,8 @@ public struct Route<Root> {
     ///   - rootViewController: The view controller at the root of the navigation hierarchy.
     ///   - options: Any routing options that should be taken into account when routing.
     /// - Returns: Return true if the routing is successful, false otherwise.
-    func route(fromRootViewController rootViewController: Root, options: [AnyHashable: Any]?) -> Bool {
-        return navigator(rootViewController, options)
+    func route(fromRoot root: Root, options: [AnyHashable: Any]?) -> Bool {
+        return navigator(root, options)
     }
 }
 
