@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         if let window = window, let rootVC = window.rootViewController as? UITabBarController {
-            routeController = RouteController(rootViewController: rootVC)
+            routeController = RouteController(root: rootVC)
         }
 
         return true
@@ -64,7 +64,7 @@ When dealing with URLs, in addition to vending `Route` objects, you will also ne
 Creating a new route is as simple as creating a new `Route` instance.
 
 ``` swift
-extension Route where RootViewController == UITabBarController {
+extension Route where Root == UITabBarController {
     static var leftTab: Route {
 		return Route(identifier: .leftTabRoute) { rootViewController, options -> Bool in
             rootViewController.selectedIndex = 0

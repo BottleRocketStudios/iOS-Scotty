@@ -8,7 +8,7 @@
 import Foundation
 
 /// The RouteController object handles the execution of routes as entry points into your application.
-/// The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.
+/// The route controller is generic over its root, meaning that it will only accept routes that begin in the same root type as it was created with.
 open class RouteController<Root>: NSObject {
     
     // MARK: Properties

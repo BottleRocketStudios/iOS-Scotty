@@ -115,7 +115,7 @@
 * Add controllers and protocols to make it simple to handle app routing from many possible input sources. Here's how it works:
 
 ```swift
-let controller = routeController = RouteController(rootViewController: rootVC)
+let controller = routeController = RouteController(root: rootVC)
 controller.open(myRoute)
 ```
 
