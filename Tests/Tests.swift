@@ -31,7 +31,7 @@ class Tests: XCTestCase {
 	
 	func testClearOfStoredRoutes() {
 		let routeController = RouteController(rootViewController: UIViewController(), ready: false)
-		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
+		let testRoute = Route<UIViewController>(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
 		routeController.open(testRoute)
 		XCTAssertNotNil(routeController.storedRoute)
 		
@@ -45,7 +45,7 @@ class Tests: XCTestCase {
 	func testAutomaticExecutionOfStoredRoutes() {
 		let exp = expectation(description: "routeExecution")
 		let routeController = RouteController(rootViewController: UIViewController(), ready: false)
-		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
+		let testRoute = Route<UIViewController>(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
 			exp.fulfill()
 			return true
 		}
@@ -72,7 +72,7 @@ class Tests: XCTestCase {
 	func testRouteActionableDestination() {
 		let exp = expectation(description: "routeExecution")
 		let routeController = RouteController(rootViewController: UIViewController())
-		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
+		let testRoute = Route<UIViewController>(identifier: RouteIdentifier(rawValue: "test")) { _, _ in
 			
 			let actionable = ActionableObject()
             actionable.setRouteAction {
@@ -116,7 +116,7 @@ class Tests: XCTestCase {
     }
 	
 	func testNestedAnyRouteInitializers() {
-		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
+		let testRoute = Route<UIViewController>(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
 		let nestedRoute = Route(route: testRoute)
 		
 		XCTAssert(testRoute.isSuspendable == nestedRoute.isSuspendable)
@@ -127,7 +127,7 @@ class Tests: XCTestCase {
 	}
 	
 	func testNestedAnyRouteInitializerOverrideSuspendable() {
-		let testRoute = Route(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
+		let testRoute = Route<UIViewController>(identifier: RouteIdentifier(rawValue: "test")) { _, _ in return true }
 		let nestedRoute = Route(route: testRoute, isSuspendable: false)
 		
 		XCTAssert(testRoute.isSuspendable != nestedRoute.isSuspendable)
@@ -161,7 +161,7 @@ class Tests: XCTestCase {
     func testRoutablePatternMatching() {
         let exp = expectation(description: "pattern match")
         let id = RouteIdentifier(rawValue: "test")
-        let route = Route(identifier: id) { _, _ in return true }
+        let route = Route<UIViewController>(identifier: id) { _, _ in return true }
         
         switch route {
         case id: exp.fulfill()
