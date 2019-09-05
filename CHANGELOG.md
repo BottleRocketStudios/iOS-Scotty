@@ -6,6 +6,10 @@
 [Ryan Gant](https://github.com/ganttastic)
 [#29](https://github.com/BottleRocketStudios/iOS-Scotty/pull/29)
 
+* Remove restriction that Route.Root must be a UIViewController.
+[Will McGinty](https://github.com/wmcginty)
+[#30](https://github.com/BottleRocketStudios/iOS-Scotty/pull/30)
+
 ##### Bug Fixes
 
 * None.
