@@ -47,7 +47,7 @@ public struct Route<Root> {
     /// If the intended destination can be reached successfully, this function should return true. Otherwise, return false.
     ///
     /// - Parameters:
-    ///   - root: The view controller at the root of the navigation hierarchy.
+    ///   - root: The object at the root of the navigation hierarchy.
     ///   - options: Any routing options that should be taken into account when routing.
     /// - Returns: Return true if the routing is successful, false otherwise.
     func route(fromRoot root: Root, options: [AnyHashable: Any]?) -> Bool {

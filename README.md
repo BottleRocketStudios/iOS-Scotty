@@ -66,10 +66,10 @@ Creating a new route is as simple as creating a new `Route` instance.
 ``` swift
 extension Route where Root == UITabBarController {
     static var leftTab: Route {
-		return Route(identifier: .leftTabRoute) { rootViewController, options -> Bool in
-            rootViewController.selectedIndex = 0
+		return Route(identifier: .leftTabRoute) { root, options -> Bool in
+            root = 0
 
-            if let routeRespondableController = rootViewController.selectedViewController as? RouteRespondable {
+            if let routeRespondableController = root.selectedViewController as? RouteRespondable {
                 routeRespondableController.setRouteAction {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                         print("LeftTab successfully reached!")
