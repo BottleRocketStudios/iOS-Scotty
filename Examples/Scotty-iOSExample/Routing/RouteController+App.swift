@@ -15,6 +15,6 @@ class Router {
             fatalError("The application architecture has changed - our root view controller is no longer a UITabBarController. Developer error.")
         }
         
-		return RouteController(rootViewController: rootVC)
+		return RouteController(root: rootVC)
 	}
 }

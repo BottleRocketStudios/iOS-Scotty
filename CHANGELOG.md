@@ -6,6 +6,10 @@
 [Ryan Gant](https://github.com/ganttastic)
 [#29](https://github.com/BottleRocketStudios/iOS-Scotty/pull/29)
 
+* Remove restriction that Route.Root must be a UIViewController.
+[Will McGinty](https://github.com/wmcginty)
+[#30](https://github.com/BottleRocketStudios/iOS-Scotty/pull/30)
+
 ##### Bug Fixes
 
 * None.
@@ -111,7 +115,7 @@
 * Add controllers and protocols to make it simple to handle app routing from many possible input sources. Here's how it works:
 
 ```swift
-let controller = routeController = RouteController(rootViewController: rootVC)
+let controller = routeController = RouteController(root: rootVC)
 controller.open(myRoute)
 ```
 

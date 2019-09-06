@@ -16,13 +16,13 @@ extension RouteIdentifier {
 }
 
 // MARK: Define Specialized Routes
-extension Route where RootViewController == UITabBarController {
+extension Route where Root == UITabBarController {
 	    
     static var leftTab: Route {
-		return Route(identifier: .leftTabRoute) { rootViewController, _ -> Bool in
-            rootViewController.selectedIndex = 0
+		return Route(identifier: .leftTabRoute) { root, _ -> Bool in
+            root.selectedIndex = 0
             
-            if let routeRespondableController = rootViewController.selectedViewController as? RouteRespondable {
+            if let routeRespondableController = root.selectedViewController as? RouteRespondable {
                 routeRespondableController.setRouteAction {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         print("LeftTab successfully reached!")
@@ -35,22 +35,22 @@ extension Route where RootViewController == UITabBarController {
     }
     
     static var middleTab: Route {
-        return Route(identifier: .middleTabRoute) { rootViewController, _ -> Bool in
-            rootViewController.selectedIndex = 1
+        return Route(identifier: .middleTabRoute) { root, _ -> Bool in
+            root.selectedIndex = 1
             return true
         }
     }
     
     static var rightTab: Route {
-        return Route(identifier: .rightTabRoute) { rootViewController, _ -> Bool in
-            rootViewController.selectedIndex = 2
+        return Route(identifier: .rightTabRoute) { root, _ -> Bool in
+            root.selectedIndex = 2
             return true
         }
     }
 }
 
 // MARK: Helper
-extension Route where RootViewController == UITabBarController {
+extension Route where Root == UITabBarController {
 	
 	static func route(forIdentifier identifier: String) -> Route? {
 		if identifier.contains(RouteIdentifier.leftTabRoute.rawValue) {

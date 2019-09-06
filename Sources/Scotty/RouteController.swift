@@ -8,17 +8,17 @@
 import Foundation
 
 /// The RouteController object handles the execution of routes as entry points into your application.
-/// The route controller is generic over its rootViewController (which can be any subclass of UIViewController), meaning that it will only accept routes that begin in the same rootViewController type as it was created with.
-open class RouteController<RootViewController: UIViewController>: NSObject {
+/// The route controller is generic over its root, meaning that it will only accept routes that begin in the same root type as it was created with.
+open class RouteController<Root>: NSObject {
     
     // MARK: Properties
-	fileprivate let rootViewController: RootViewController
+	fileprivate let root: Root
     fileprivate(set) var isPreparedForRouting = false
 	fileprivate(set) var storedRoute: (() -> Void)?
     
     // MARK: Initializers
-    public init(rootViewController: RootViewController, ready: Bool = true) {
-        self.rootViewController = rootViewController
+    public init(root: Root, ready: Bool = true) {
+        self.root = root
         super.init()
         
         setRouteHandling(enabled: ready)
@@ -35,10 +35,10 @@ public extension RouteController {
 	///   - options: Any routing options that should be taken into account when routing.
 	/// - Returns: Returns true if routing reaches its intended destination, otherwise returns false.
     @discardableResult
-    func open(_ route: Route<RootViewController>?, options: [AnyHashable: Any]? = nil) -> Bool {
+    func open(_ route: Route<Root>?, options: [AnyHashable: Any]? = nil) -> Bool {
         guard let route = route else { return false }
         guard isPreparedForRouting || !route.isSuspendable else { storedRoute = stored(route: route, options: options); return false }
-        return route.route(fromRootViewController: rootViewController, options: options)
+        return route.route(fromRoot: root, options: options)
     }
 }
 
@@ -55,7 +55,7 @@ public extension RouteController {
 		case clear
 		case none
 		
-		fileprivate func executePolicy(with routeController: RouteController<RootViewController>) {
+		fileprivate func executePolicy(with routeController: RouteController<Root>) {
 			switch self {
 			case .execute:
 				routeController.executeStoredRoute()
@@ -104,7 +104,7 @@ fileprivate extension RouteController {
 // MARK: Route Storage
 fileprivate extension RouteController {
     
-    func stored(route: Route<RootViewController>, options: [AnyHashable: Any]?) -> () -> Void {
+    func stored(route: Route<Root>, options: [AnyHashable: Any]?) -> () -> Void {
         return { [weak self] in
             self?.open(route, options: options)
         }
