@@ -11,7 +11,7 @@
 [#30](https://github.com/BottleRocketStudios/iOS-Scotty/pull/30)
 
 * Added Swift Package Manager support.
-[Brian Miller](https://gitthub.com/jobsismyhomeboy)
+[Brian Miller](https://github.com/jobsismyhomeboy)
 [#28](https://github.com/BottleRocketStudios/iOS-Scotty/issues/28)
 
 ##### Bug Fixes
