@@ -101,6 +101,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Installation 
 
+### Swift Package Manager
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/BottleRocketStudios/iOS-Scotty.git", from: "2.1.0")
+]
+```
+
 #### CocoaPods
 
 [CocoaPods]: http://cocoapods.org
