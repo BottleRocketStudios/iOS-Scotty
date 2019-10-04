@@ -90,6 +90,7 @@
 		0EFFC4CA2035E7D500BC168B /* Scotty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scotty.h; sourceTree = "<group>"; };
 		0EFFC4CB2035E7D500BC168B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFFC4D02035E7D500BC168B /* Scotty-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scotty-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5285F22322DB2B00A25962 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		62F525702257FA6B0052B8E7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +198,7 @@
 			children = (
 				0EFFC4B92035E63E00BC168B /* README.md */,
 				62F525702257FA6B0052B8E7 /* CHANGELOG.md */,
+				5C5285F22322DB2B00A25962 /* Package.swift */,
 				0EFFC4B72035E62700BC168B /* Sources */,
 				0EFFC4B82035E62E00BC168B /* Tests */,
 				0E2FDC122035E98800E1DE39 /* Examples */,
