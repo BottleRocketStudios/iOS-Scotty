@@ -2,7 +2,9 @@
 
 ##### Enhancements
 
-* None.
+* Expose `isPreparedForRouting` and `isPendingRouteExecution` outside the module.
+[Will McGinty](https://github.com/wmcginty)
+[#36](https://github.com/BottleRocketStudios/iOS-Scotty/issues/36)
 
 ##### Bug Fixes
 

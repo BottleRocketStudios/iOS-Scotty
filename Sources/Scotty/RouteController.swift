@@ -12,10 +12,10 @@ import Foundation
 open class RouteController<Root>: NSObject {
     
     // MARK: Properties
-	public let root: Root
+    public let root: Root
     public private(set) var isPreparedForRouting = false
     public var isPendingRouteExecution: Bool { return storedRoute != nil }
-	private(set) var storedRoute: (() -> Void)?
+    private(set) var storedRoute: (() -> Void)?
     
     // MARK: Initializers
     public init(root: Root, ready: Bool = true) {
