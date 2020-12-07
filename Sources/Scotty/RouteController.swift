@@ -14,6 +14,7 @@ open class RouteController<Root>: NSObject {
     // MARK: Properties
 	public let root: Root
     public private(set) var isPreparedForRouting = false
+    public var isPendingRouteExecution: Bool { return storedRoute != nil }
 	private(set) var storedRoute: (() -> Void)?
     
     // MARK: Initializers
