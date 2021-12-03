@@ -19,7 +19,7 @@ class ViewController: UIViewController, RouteRespondable {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 		
-        //Calling this method with a value of 'true' will cause the routeAction (if present) to execute
+        // Calling this method with a value of 'true' will cause the routeAction (if present) to execute
         setPreparedForAction(true)
     }
 	
@@ -29,29 +29,27 @@ class ViewController: UIViewController, RouteRespondable {
     }
     
     @IBAction func triggerNotification() {
-		if #available(iOS 10.0, *) {
-			
-			UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { _, _ in
-				
-				//Create three actions for a generic notification category
-				let leftAction = UNNotificationAction(identifier: "leftTab", title: "Left", options: [.foreground])
-				let middleAction = UNNotificationAction(identifier: "middleTab", title: "Middle", options: [.foreground])
-				let rightAction = UNNotificationAction(identifier: "rightTab", title: "Right", options: [.foreground])
-				
-				let category = UNNotificationCategory(identifier: "aNotification", actions: [leftAction, middleAction, rightAction], intentIdentifiers: [], options: [])
-				UNUserNotificationCenter.current().setNotificationCategories([category])
-				
-				//Create a sample notification in the category we previously created
-				let content = UNMutableNotificationContent()
-				content.categoryIdentifier = "aNotification"
-				content.title = "This is a rich notification!"
-				content.body = "Where in the app do you want to go?"
-				
-				//Request this notification to fire in 5.0 seconds
-				let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
-				let request = UNNotificationRequest(identifier: "aRequest", content: content, trigger: trigger)
-				UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-			}
-		}
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { _, _ in
+            
+            // Create three actions for a generic notification category
+            let leftAction = UNNotificationAction(identifier: "leftTab", title: "Left", options: [.foreground])
+            let middleAction = UNNotificationAction(identifier: "middleTab", title: "Middle", options: [.foreground])
+            let rightAction = UNNotificationAction(identifier: "rightTab", title: "Right", options: [.foreground])
+            
+            let category = UNNotificationCategory(identifier: "aNotification", actions: [leftAction, middleAction, rightAction], intentIdentifiers: [], options: [])
+            UNUserNotificationCenter.current().setNotificationCategories([category])
+            
+            // Create a sample notification in the category we previously created
+            let content = UNMutableNotificationContent()
+            content.categoryIdentifier = "aNotification"
+            content.title = "This is a rich notification!"
+            content.body = "Where in the app do you want to go?"
+            
+            // Request this notification to fire in 5.0 seconds
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+            let request = UNNotificationRequest(identifier: "aRequest", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+        }
     }
 }

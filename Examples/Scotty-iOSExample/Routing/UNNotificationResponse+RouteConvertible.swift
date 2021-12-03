@@ -9,7 +9,6 @@ import Foundation
 import UserNotifications
 import Scotty
 
-@available(iOS 10.0, *)
 extension UNNotificationResponse {
 
     public var route: Route<UITabBarController>? {
