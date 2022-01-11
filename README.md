@@ -1,6 +1,6 @@
 Scotty
 ============
-[![CI Status](http://img.shields.io/travis/BottleRocketStudios/iOS-Scotty.svg?style=flat)](https://travis-ci.org/BottleRocketStudios/iOS-Scotty)
+![CI Status](https://github.com/BottleRocketStudios/iOS-Scotty/actions/workflows/main.yml/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
@@ -99,7 +99,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 * iOS 9.0+
 * Swift 5.0
 
-### Installation 
+### Installation
 
 ### Swift Package Manager
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// The RouteRespondable protocol is adopted by an object that can execute its routeAction at some point during its lifecycle.
-public protocol RouteRespondable: class {
+public protocol RouteRespondable: AnyObject {
     
     /// Represents an action to be performed by the conforming object when it deems itself ready to do so.
     typealias Action = () -> Void
@@ -35,7 +35,7 @@ public extension RouteRespondable {
     func setPreparedForAction(_ prepared: Bool) {
         isPreparedForAction = prepared
         
-        //If the object is now prepared for action, execute any pending action
+        // If the object is now prepared for action, execute any pending action
         if prepared, let action = routeAction {
             routeAction = nil
             action()
@@ -44,10 +44,10 @@ public extension RouteRespondable {
 
     func setRouteAction(_ action: @escaping Action) {
         
-        //If the object is already prepared, immediately execute and do not store the action.
+        // If the object is already prepared, immediately execute and do not store the action.
         guard !isPreparedForAction else { return action() }
         
-        //If the object is not prepared, store the action for later
+        // If the object is not prepared, store the action for later
         routeAction = action
     }
 }
