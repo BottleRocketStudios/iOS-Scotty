@@ -5,7 +5,7 @@
 //  Copyright © 2017 Bottle Rocket Studios. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Scotty
 import CoreSpotlight
 

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ata-Ly-Zof">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ata-Ly-Zof">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--MIDDLE-->
         <scene sceneID="FRQ-3s-VQa">
             <objects>
-                <viewController id="9mm-1r-xkw" customClass="OtherViewController" customModule="Routes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9mm-1r-xkw" customClass="OtherViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9FM-TV-qTw"/>
                         <viewControllerLayoutGuide type="bottom" id="nzw-l1-9sY"/>
@@ -21,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R30-uj-bkK">
-                                <rect key="frame" x="147.5" y="318.5" width="81" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R30-uj-bkK">
+                                <rect key="frame" x="147.5" y="318.5" width="80" height="30"/>
                                 <state key="normal" title="Go To Right"/>
                                 <connections>
                                     <action selector="goToRight" destination="9mm-1r-xkw" eventType="touchUpInside" id="eHh-YS-YQa"/>
@@ -44,7 +42,7 @@
         <!--LEFT-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Routes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,15 +51,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8B-dh-oZl">
-                                <rect key="frame" x="103.5" y="318" width="168" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8B-dh-oZl">
+                                <rect key="frame" x="103.5" y="318.5" width="168" height="30"/>
                                 <state key="normal" title="TRIGGER NOTIFICATION"/>
                                 <connections>
                                     <action selector="triggerNotification" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffg-mh-V3y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-c9-cM0">
-                                <rect key="frame" x="142" y="408" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-c9-cM0">
+                                <rect key="frame" x="142" y="408.5" width="91" height="30"/>
                                 <state key="normal" title="Go To Middle"/>
                                 <connections>
                                     <action selector="goToMiddle" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAM-AP-ZHR"/>
@@ -85,7 +83,7 @@
         <!--RIGHT-->
         <scene sceneID="Jrh-rC-tme">
             <objects>
-                <viewController id="g7E-vM-i5h" customClass="LastViewController" customModule="Routes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g7E-vM-i5h" customClass="LastViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="guc-VV-Ms0"/>
                         <viewControllerLayoutGuide type="bottom" id="mxw-bK-w4d"/>
@@ -94,7 +92,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbh-Jo-FcA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbh-Jo-FcA">
                                 <rect key="frame" x="152" y="318.5" width="71" height="30"/>
                                 <state key="normal" title="Go To Left"/>
                                 <connections>

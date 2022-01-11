@@ -2,6 +2,26 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Scotty.xcodeproj">
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:CHANGELOG.md">
+   </FileRef>
+   <FileRef
+      location = "group:Scotty.podspec">
+   </FileRef>
+   <Group
+      location = "group:Examples"
+      name = "Examples">
+      <Group
+         location = "group:iOS Example"
+         name = "iOS Example">
+         <FileRef
+            location = "group:iOS Example.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Scotty">
    </FileRef>
 </Workspace>

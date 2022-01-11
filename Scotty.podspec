@@ -22,7 +22,8 @@ Scotty provides a simple abstraction around the various entry points to an iOS a
 
   s.swift_version = '5.0'
   s.ios.deployment_target = '12.0'
-  s.source_files = 'Sources/Scotty/**/*'
+  s.tvos.deployment_target = '12.0'
+  s.source_files = 'Scotty/Sources/Scotty/**/*'
   s.frameworks = 'Foundation', 'UIKit'
 
 end
