@@ -264,6 +264,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "Bottle Rocket Studios";
 				TargetAttributes = {
 					0E3F8F3A278F84B100C9E69A = {
 						CreatedOnToolsVersion = 13.2.1;

@@ -1,3 +1,10 @@
+//
+//  Tests.swift
+//  Tests
+//
+//  Copyright © 2018 Bottle Rocket Studios. All rights reserved.
+//
+
 import UIKit
 import XCTest
 @testable import Scotty
