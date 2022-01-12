@@ -13,13 +13,9 @@
    <Group
       location = "group:Examples"
       name = "Examples">
-      <Group
-         location = "group:iOS Example"
-         name = "iOS Example">
-         <FileRef
-            location = "group:iOS Example.xcodeproj">
-         </FileRef>
-      </Group>
+      <FileRef
+         location = "group:Example.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Scotty">

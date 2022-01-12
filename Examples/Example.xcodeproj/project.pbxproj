@@ -160,13 +160,14 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "Bottle Rocket Studios";
 				TargetAttributes = {
 					0E40E6A7278E2D4C00C801B9 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 0E40E6A3278E2D4C00C801B9 /* Build configuration list for PBXProject "iOS Example" */;
+			buildConfigurationList = 0E40E6A3278E2D4C00C801B9 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -379,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E40E6A3278E2D4C00C801B9 /* Build configuration list for PBXProject "iOS Example" */ = {
+		0E40E6A3278E2D4C00C801B9 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E40E6BA278E2D4D00C801B9 /* Debug */,

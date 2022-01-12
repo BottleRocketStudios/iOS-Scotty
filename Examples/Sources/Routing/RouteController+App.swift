@@ -1,6 +1,6 @@
 //
 //  RouteController+App.swift
-//  RouteKit
+//  Scotty
 //
 //  Copyright © 2017 Bottle Rocket Studios. All rights reserved.
 //

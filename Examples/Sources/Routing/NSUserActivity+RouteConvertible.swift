@@ -1,6 +1,6 @@
 //
 //  NSUserActivity+RouteConvertible.swift
-//  Routes
+//  Scotty
 //
 //  Copyright © 2017 Bottle Rocket Studios. All rights reserved.
 //
