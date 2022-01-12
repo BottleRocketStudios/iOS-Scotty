@@ -17,14 +17,14 @@ jobs:
         name: ["iOS", "tvOS"]
         include:
             - name: "iOS"
-              scheme: "Scotty"
+              scheme: "Scotty iOS"
               destination: "platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro"
               test: true
               lint: true
 
             - name: "tvOS"
-              scheme: "Scotty"
-              destination: "platform=tvOS Simulator,OS=15.2,name=Apple TV 4K"
+              scheme: "Scotty tvOS"
+              destination: "platform=tvOS Simulator,OS=15.2,name=Apple TV 4K (2nd generation)"
               test: true
               lint: true
 

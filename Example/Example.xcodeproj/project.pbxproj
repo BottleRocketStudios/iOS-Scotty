@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E80C168278E2F33008F9FA9 /* Scotty in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80C167278E2F33008F9FA9 /* Scotty */; };
+		0E3F8F8E278F871800C9E69A /* Scotty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3F8F8D278F871800C9E69A /* Scotty.framework */; };
+		0E3F8F90278F872200C9E69A /* Scotty.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E3F8F8D278F871800C9E69A /* Scotty.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E80C169278E2F6F008F9FA9 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40E6C4278E2DC100C801B9 /* LastViewController.swift */; };
 		0E80C16A278E2F6F008F9FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40E6C5278E2DC100C801B9 /* ViewController.swift */; };
 		0E80C16B278E2F6F008F9FA9 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40E6C6278E2DC100C801B9 /* OtherViewController.swift */; };
@@ -23,7 +24,21 @@
 		0E80C177278E3328008F9FA9 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E80C176278E3328008F9FA9 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0E3F8F8F278F871B00C9E69A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E3F8F90278F872200C9E69A /* Scotty.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0E3F8F8D278F871800C9E69A /* Scotty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Scotty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E40E6A8278E2D4C00C801B9 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E40E6C2278E2DC100C801B9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0E40E6C4278E2DC100C801B9 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E80C168278E2F33008F9FA9 /* Scotty in Frameworks */,
+				0E3F8F8E278F871800C9E69A /* Scotty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +139,7 @@
 		0E80C166278E2F30008F9FA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E3F8F8D278F871800C9E69A /* Scotty.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +154,7 @@
 				0E40E6A4278E2D4C00C801B9 /* Sources */,
 				0E40E6A5278E2D4C00C801B9 /* Frameworks */,
 				0E40E6A6278E2D4C00C801B9 /* Resources */,
+				0E3F8F8F278F871B00C9E69A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -145,7 +162,6 @@
 			);
 			name = "iOS Example";
 			packageProductDependencies = (
-				0E80C167278E2F33008F9FA9 /* Scotty */,
 			);
 			productName = "iOS Example";
 			productReference = 0E40E6A8278E2D4C00C801B9 /* iOS Example.app */;
@@ -399,13 +415,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0E80C167278E2F33008F9FA9 /* Scotty */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Scotty;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E40E6A0278E2D4C00C801B9 /* Project object */;
 }

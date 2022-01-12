@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Scotty"
-               BuildableName = "Scotty"
-               BlueprintName = "Scotty"
-               ReferencedContainer = "container:">
+               BlueprintIdentifier = "0E3F8F57278F851600C9E69A"
+               BuildableName = "Scotty_tvOS.framework"
+               BlueprintName = "Scotty tvOS"
+               ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ScottyTests"
-               BuildableName = "ScottyTests"
-               BlueprintName = "ScottyTests"
-               ReferencedContainer = "container:">
+               BlueprintIdentifier = "0E3F8F5E278F851700C9E69A"
+               BuildableName = "Scotty tvOSTests.xctest"
+               BlueprintName = "Scotty tvOS Tests"
+               ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -60,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Scotty"
-            BuildableName = "Scotty"
-            BlueprintName = "Scotty"
-            ReferencedContainer = "container:">
+            BlueprintIdentifier = "0E3F8F57278F851600C9E69A"
+            BuildableName = "Scotty_tvOS.framework"
+            BlueprintName = "Scotty tvOS"
+            ReferencedContainer = "container:Scotty.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
