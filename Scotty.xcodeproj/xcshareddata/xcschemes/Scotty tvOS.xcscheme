@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0E3F8F57278F851600C9E69A"
-               BuildableName = "Scotty_tvOS.framework"
+               BuildableName = "Scotty.framework"
                BlueprintName = "Scotty tvOS"
                ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0E3F8F5E278F851700C9E69A"
-               BuildableName = "Scotty tvOSTests.xctest"
+               BuildableName = "Scotty tvOS Tests.xctest"
                BlueprintName = "Scotty tvOS Tests"
                ReferencedContainer = "container:Scotty.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E3F8F57278F851600C9E69A"
-            BuildableName = "Scotty_tvOS.framework"
+            BuildableName = "Scotty.framework"
             BlueprintName = "Scotty tvOS"
             ReferencedContainer = "container:Scotty.xcodeproj">
          </BuildableReference>

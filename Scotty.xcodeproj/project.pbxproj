@@ -51,15 +51,15 @@
 		0E3F8F71278F854200C9E69A /* RouteRespondable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteRespondable.swift; sourceTree = "<group>"; };
 		0E3F8F72278F854200C9E69A /* RouteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteController.swift; sourceTree = "<group>"; };
 		0E3F8F73278F854200C9E69A /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		0E3F8F7F278F856600C9E69A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		0E3F8F80278F856600C9E69A /* Scotty.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Scotty.podspec; path = ../Scotty.podspec; sourceTree = "<group>"; };
-		0E3F8F81278F856600C9E69A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
-		0E3F8F84278F859C00C9E69A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		0E3F8F85278F859C00C9E69A /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../../CONTRIBUTING.md; sourceTree = "<group>"; };
-		0E3F8F86278F859C00C9E69A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
-		0E3F8F87278F859C00C9E69A /* CODEOWNERS */ = {isa = PBXFileReference; lastKnownFileType = text; name = CODEOWNERS; path = ../../CODEOWNERS; sourceTree = "<group>"; };
-		0E3F8F88278F859C00C9E69A /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = text; name = NOTICE; path = ../../NOTICE; sourceTree = "<group>"; };
-		0E3F8F89278F85A800C9E69A /* Dangerfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dangerfile.swift; path = ../../Dangerfile.swift; sourceTree = "<group>"; };
+		0E3F8F7F278F856600C9E69A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0E3F8F80278F856600C9E69A /* Scotty.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Scotty.podspec; sourceTree = "<group>"; };
+		0E3F8F81278F856600C9E69A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		0E3F8F84278F859C00C9E69A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0E3F8F85278F859C00C9E69A /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
+		0E3F8F86278F859C00C9E69A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		0E3F8F87278F859C00C9E69A /* CODEOWNERS */ = {isa = PBXFileReference; lastKnownFileType = text; name = CODEOWNERS; path = ../CODEOWNERS; sourceTree = "<group>"; };
+		0E3F8F88278F859C00C9E69A /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = text; name = NOTICE; path = ../NOTICE; sourceTree = "<group>"; };
+		0E3F8F89278F85A800C9E69A /* Dangerfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dangerfile.swift; path = ../Dangerfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +123,7 @@
 			children = (
 				0E3F8F6E278F854200C9E69A /* Tests.swift */,
 			);
-			name = Tests;
-			path = ../Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		0E3F8F6F278F854200C9E69A /* Sources */ = {
@@ -136,8 +135,7 @@
 				0E3F8F72278F854200C9E69A /* RouteController.swift */,
 				0E3F8F73278F854200C9E69A /* Route.swift */,
 			);
-			name = Sources;
-			path = ../Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		0E3F8F7E278F855800C9E69A /* Deployment */ = {
