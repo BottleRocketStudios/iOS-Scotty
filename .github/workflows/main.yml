@@ -9,15 +9,22 @@ jobs:
   Build:
     runs-on: macos-11
     env:
+      DEVELOPER_DIR: /Applications/Xcode_13.2.app/Contents/Developer
       workspace: "Scotty.xcworkspace"
     strategy:
       fail-fast: false
       matrix:
-        name: ["iOS"]
+        name: ["iOS", "tvOS"]
         include:
             - name: "iOS"
-              scheme: "Scotty-iOS"
-              destination: "platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro"
+              scheme: "Scotty"
+              destination: "platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro"
+              test: true
+              lint: true
+
+            - name: "tvOS"
+              scheme: "Scotty"
+              destination: "platform=tvOS Simulator,OS=15.2,name=Apple TV 4K"
               test: true
               lint: true
 
