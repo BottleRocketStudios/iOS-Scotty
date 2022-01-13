@@ -5,20 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "Scotty",
-    platforms: [.iOS(.v12), .tvOS(.v12)],
-    products: [
-        .library(
-            name: "Scotty",
-            targets: ["Scotty"]),
+    platforms: [
+        .iOS(.v12),
+        .tvOS(.v12)
     ],
-    dependencies: [],
+    products: [
+        .library(name: "Scotty", targets: ["Scotty"]),
+    ],
     targets: [
-        .target(
-            name: "Scotty",
-            dependencies: [],
-            path: "Sources"),
-        .testTarget(
-            name: "ScottyTests",
-            dependencies: ["Scotty"]),
+        .target(name: "Scotty", path: "Sources"),
+        .testTarget(name: "ScottyTests", dependencies: ["Scotty"]),
     ]
 )
