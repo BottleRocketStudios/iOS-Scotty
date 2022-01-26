@@ -20,9 +20,10 @@ Scotty provides a simple abstraction around the various entry points to an iOS a
   s.author           = { 'Bottle Rocket Studios' => 'will.mcginty@bottlerocketstudios.com' }
   s.source           = { :git => 'https://github.com/bottlerocketstudios/iOS-Scotty.git', :tag => s.version.to_s }
 
-  s.swift_version = '5.0'
+  s.swift_version = '5.5'
   s.ios.deployment_target = '12.0'
-  s.source_files = 'Sources/Scotty/**/*'
+  s.tvos.deployment_target = '12.0'
+  s.source_files = 'Sources/**/*'
   s.frameworks = 'Foundation', 'UIKit'
 
 end
