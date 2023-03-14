@@ -6,7 +6,6 @@ Scotty
 [![License](https://img.shields.io/cocoapods/l/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![Platform](https://img.shields.io/cocoapods/p/Scotty.svg?style=flat)](http://cocoapods.org/pods/Scotty)
 [![codecov](https://codecov.io/gh/BottleRocketStudios/iOS-Scotty/branch/master/graph/badge.svg)](https://codecov.io/gh/BottleRocketStudios/iOS-Scotty)
-[![codebeat badge](https://codebeat.co/badges/e273e4d9-8bc0-4534-90ad-3d8a49e885de)](https://codebeat.co/projects/github-com-bottlerocketstudios-ios-scotty-master)
 
 ### Purpose
 This library provides a simple abstraction around the various entry points to an iOS application. URLs, application shortcut items, user activities, notification responses, and even custom types can be converted into a Route. These routes represent the various destinations your app can deep link too, allowing you to have a single code path through which all application links are executed.
