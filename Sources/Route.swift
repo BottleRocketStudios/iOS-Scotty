@@ -11,7 +11,7 @@ public struct Route<Root> {
     public typealias Navigator = (_ root: Root, _ options: [AnyHashable: Any]?) -> Bool
     
     // MARK: Properties
-    public let navigator: Navigator
+    private let navigator: Navigator
 
     /// Determines if this Routable object can be suspended by its executing RouteController. If this property is set to false, this route will always execute immediately.
     public let isSuspendable: Bool
