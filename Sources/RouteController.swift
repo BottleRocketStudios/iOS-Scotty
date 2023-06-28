@@ -52,14 +52,14 @@ public extension RouteController {
 // MARK: Routing Availability
 public extension RouteController {
 	
-	/// The StoredRoutePolicy determines the outcome of any routes the `RouteController` has stored when it resumes handling routes.
-	enum StoredRoutePolicy {
+    /// The StoredRoutePolicy determines the outcome of any routes the `RouteController` has stored when it resumes handling routes.
+    enum StoredRoutePolicy {
 
         /// The stored route will be executed, and then cleared.
-		case execute
+        case execute
 
         /// The stored route will be cleared. It will not be executed.
-		case clear
+        case clear
 
         ///  Given the `StoredRoute`, return an arbitrary route to execute after resumption of route handling.
         case transform((StoredRoute<Root>) -> Route<Root>?)
@@ -75,17 +75,18 @@ public extension RouteController {
 			case .execute: routeController.executeStoredRoute()
 			case .clear: routeController.clearStoredRoute()
             case .transform(let routeTransformer):
-                if let storedRoute = routeController.storedRoute {
-                    routeController.clearStoredRoute()
-
-                    let pendingRoute = routeTransformer(storedRoute)
-                    routeController.open(pendingRoute)
+                if let stored = routeController.storedRoute {
+                    guard let pendingRoute = routeTransformer(stored) else {
+                        return routeController.clearStoredRoute()
+                    }
+                    
+                    routeController.storedRoute = .init(route: pendingRoute, options: nil)
+                    routeController.executeStoredRoute()
                 }
 
             case .custom(let handler):
                 let storedRoute = routeController.storedRoute
                 routeController.clearStoredRoute()
-
                 handler(storedRoute, routeController)
 
 			default: return
