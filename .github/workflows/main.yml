@@ -23,7 +23,7 @@ jobs:
 
             - name: "tvOS"
               scheme: "Scotty tvOS"
-              destination: "platform=tvOS Simulator,OS=16.2,name=Apple TV 4K (2nd generation)"
+              destination: "platform=tvOS Simulator,OS=16.1,name=Apple TV 4K (2nd generation)"
               test: true
 
     steps:
