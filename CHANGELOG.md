@@ -2,7 +2,10 @@
 
 ##### Enhancements
 
-* None
+* Expand the capabilities of `StoredRoutePolicy` for greater flexibility upon resumption of route handling. 
+[Will McGinty](https://github.com/wmcginty)
+[#44](https://github.com/BottleRocketStudios/iOS-Scotty/pull/44)
+
 
 ##### Bug Fixes
 
@@ -15,7 +18,7 @@
 
 * Expose `isPreparedForRouting` and `isPendingRouteExecution` outside the module.
 [Will McGinty](https://github.com/wmcginty)
-[#36](https://github.com/BottleRocketStudios/iOS-Scotty/issues/36)
+[#36](https://github.com/BottleRocketStudios/iOS-Scotty/pull/36)
 
 ##### Bug Fixes
 
